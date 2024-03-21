@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh76xtistfxhn"]
+
+[ext_resource type="PackedScene" uid="uid://c4dll76lpwn61" path="res://assets/suzanne.glb" id="1_1p1cv"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="suzanne" parent="." instance=ExtResource("1_1p1cv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0736192, -1.19209e-07, -0.345238)
