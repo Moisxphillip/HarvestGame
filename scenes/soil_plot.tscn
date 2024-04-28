@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://0d1tmm0xgtwa"]
+[gd_scene load_steps=4 format=3 uid="uid://0d1tmm0xgtwa"]
 
+[ext_resource type="Script" path="res://scripts/soil_plot.gd" id="1_kxu0l"]
 [ext_resource type="ArrayMesh" uid="uid://biige3ngllevb" path="res://assets/test/farm-54-floor_dirt.obj" id="1_vnp0d"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bbixg"]
@@ -8,6 +9,7 @@ size = Vector3(1.58891, 0.137909, 1.59271)
 [node name="SoilPlot" type="Area3D"]
 collision_layer = 4
 collision_mask = 2
+script = ExtResource("1_kxu0l")
 
 [node name="Shape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0374374, 0.0349884, -0.0375061)
