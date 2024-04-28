@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctu35uoxgylwt"]
+
+[ext_resource type="PackedScene" uid="uid://c25lpsmbexpme" path="res://assets/test/floor_dirt_small_weeds.gltf.glb" id="1_1683l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rmkho"]
+size = Vector3(20.0187, 1, 20.0185)
+
+[node name="Floor" type="StaticBody3D"]
+collision_mask = 0
+
+[node name="floor_dirt_small_weeds_gltf" parent="." instance=ExtResource("1_1683l")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00845718, -0.290203, 0.00144958)
+shape = SubResource("BoxShape3D_rmkho")

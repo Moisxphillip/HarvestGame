@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=3 uid="uid://c3q1qt4i6tb5y"]
+
+[ext_resource type="PackedScene" uid="uid://ctu35uoxgylwt" path="res://scenes/floor.tscn" id="1_arc3j"]
+[ext_resource type="PackedScene" uid="uid://bp4r7fihno3q4" path="res://scenes/player.tscn" id="2_w26p3"]
+[ext_resource type="PackedScene" uid="uid://dnl7tgcs5pnkk" path="res://assets/frol.glb" id="3_gqsbf"]
+[ext_resource type="PackedScene" uid="uid://dmyysoeayet2" path="res://scenes/fence.tscn" id="4_36wb0"]
+[ext_resource type="PackedScene" uid="uid://mnl2w6wfsbv4" path="res://scenes/bush.tscn" id="5_b5rcp"]
+[ext_resource type="PackedScene" uid="uid://0d1tmm0xgtwa" path="res://scenes/soil_plot.tscn" id="6_kiset"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_knpis"]
+sky_top_color = Color(0.752941, 0.796078, 0.858824, 1)
+
+[sub_resource type="Sky" id="Sky_rlhwp"]
+sky_material = SubResource("ProceduralSkyMaterial_knpis")
+radiance_size = 2
+
+[sub_resource type="Environment" id="Environment_xy52v"]
+background_mode = 2
+sky = SubResource("Sky_rlhwp")
+glow_enabled = true
+
+[node name="Stage" type="Node3D"]
+
+[node name="EnvironmentalStuff" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xy52v")
+
+[node name="Floor" parent="." instance=ExtResource("1_arc3j")]
+
+[node name="Player" parent="." instance=ExtResource("2_w26p3")]
+
+[node name="Flor" parent="." instance=ExtResource("3_gqsbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.53043, -0.036171, -0.398156)
+
+[node name="Props" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.1875, 0, -1.37661)
+
+[node name="Fence" parent="Props" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="Fence2" parent="Props" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+
+[node name="Fence3" parent="Props" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+
+[node name="Fence4" parent="Props" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
+
+[node name="Fence5" parent="Props" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+
+[node name="Fence6" parent="Props" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -9.01738)
+
+[node name="Fence7" parent="Props" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10.0174)
+
+[node name="Fence8" parent="Props" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -11.0174)
+
+[node name="Bush" parent="Props" instance=ExtResource("5_b5rcp")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.62339, 0, -4.18746)
+
+[node name="Bush2" parent="Props" instance=ExtResource("5_b5rcp")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.62339, 0, -6.18746)
+
+[node name="Bush3" parent="Props" instance=ExtResource("5_b5rcp")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.37661, 0, -4.18746)
+
+[node name="SoilPlot" parent="." instance=ExtResource("6_kiset")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.37367, 0.2, 2)
+
+[node name="SoilPlot2" parent="." instance=ExtResource("6_kiset")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.37367, 0.2, 2)
+
+[node name="SoilPlot3" parent="." instance=ExtResource("6_kiset")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.37367, 0.2, 4)
+
+[node name="SoilPlot4" parent="." instance=ExtResource("6_kiset")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.37367, 0.2, 4)
