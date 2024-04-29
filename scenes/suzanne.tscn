@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dh76xtistfxhn"]
+[gd_scene load_steps=6 format=3 uid="uid://dh76xtistfxhn"]
 
 [ext_resource type="PackedScene" uid="uid://6xhtaq6boxwe" path="res://assets/sprout.glb" id="2_17nbh"]
 [ext_resource type="PackedScene" uid="uid://c45dwxgr6frhi" path="res://assets/sunflower.glb" id="3_pod54"]
 [ext_resource type="PackedScene" uid="uid://dgjcwxug6wkbq" path="res://assets/ype.glb" id="4_4eidp"]
 [ext_resource type="PackedScene" uid="uid://dw1vsptdg7u0j" path="res://assets/rose.glb" id="4_65iqr"]
+[ext_resource type="PackedScene" uid="uid://dfqoxpbi3o2ff" path="res://assets/harvester.glb" id="5_553so"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -18,3 +19,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75335, 2.38419e-07, 5.7147
 
 [node name="ype" parent="." instance=ExtResource("4_4eidp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4278, 0, 5.64949)
+
+[node name="harvester" parent="." instance=ExtResource("5_553so")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.99657, 0, 1.55968)
