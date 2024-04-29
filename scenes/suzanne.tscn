@@ -1,12 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://dh76xtistfxhn"]
+[gd_scene load_steps=5 format=3 uid="uid://dh76xtistfxhn"]
 
-[ext_resource type="PackedScene" uid="uid://c4dll76lpwn61" path="res://assets/suzanne.glb" id="1_1p1cv"]
-[ext_resource type="PackedScene" uid="uid://dfqoxpbi3o2ff" path="res://assets/harvester.glb" id="2_f2a57"]
+[ext_resource type="PackedScene" uid="uid://6xhtaq6boxwe" path="res://assets/sprout.glb" id="2_17nbh"]
+[ext_resource type="PackedScene" uid="uid://c45dwxgr6frhi" path="res://assets/sunflower.glb" id="3_pod54"]
+[ext_resource type="PackedScene" uid="uid://dgjcwxug6wkbq" path="res://assets/ype.glb" id="4_4eidp"]
+[ext_resource type="PackedScene" uid="uid://dw1vsptdg7u0j" path="res://assets/rose.glb" id="4_65iqr"]
 
 [node name="Node3D" type="Node3D"]
 
-[node name="suzanne" parent="." instance=ExtResource("1_1p1cv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0736192, -1.19209e-07, -0.345238)
+[node name="rose" parent="." instance=ExtResource("4_65iqr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.28242, 0, 5.72995)
 
-[node name="harvester" parent="." instance=ExtResource("2_f2a57")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.35855, -0.541656, 0.193019)
+[node name="sprout" parent="." instance=ExtResource("2_17nbh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.03513, 0, 5.59699)
+
+[node name="sunflower" parent="." instance=ExtResource("3_pod54")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75335, 2.38419e-07, 5.7147)
+
+[node name="ype" parent="." instance=ExtResource("4_4eidp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4278, 0, 5.64949)
