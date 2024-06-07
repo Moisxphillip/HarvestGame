@@ -3,7 +3,7 @@ extends State
 
 var walkSpeed : float = 3.0
 #var current_direction : Vector2 = Vector2.RIGHT #init player facing direction
-var angularAccel = 0.08
+var angularAccel = 0.1
 
 func _ready() -> void : #TODO if speed change during playthrough in future, switch this to the enter function 
     #runSpeed = entity.runSpeed
