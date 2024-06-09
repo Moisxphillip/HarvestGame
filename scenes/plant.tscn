@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://d260dstdgknaq"]
+[gd_scene load_steps=11 format=3 uid="uid://d260dstdgknaq"]
 
 [ext_resource type="Script" path="res://scripts/plant.gd" id="1_s6cqo"]
 [ext_resource type="ArrayMesh" uid="uid://cs5ogqrtv0gq" path="res://assets/test/Plant_1.obj" id="2_gsm4l"]
+[ext_resource type="PackedScene" uid="uid://dmwcdwavin86p" path="res://assets/v2/sprout.glb" id="3_5qoci"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m3psf"]
 size = Vector3(0.0964813, 1, 0.097641)
@@ -107,6 +108,9 @@ libraries = {
 
 [node name="Plant" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+visible = false
 mesh = ExtResource("2_gsm4l")
+
+[node name="Sprout" parent="." instance=ExtResource("3_5qoci")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
