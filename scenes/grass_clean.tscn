@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cimqup5f1n4d8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cis5h"]
+albedo_color = Color(0, 0.513002, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ys3g2"]
+material = SubResource("StandardMaterial3D_cis5h")
+size = Vector2(10, 10)
+
+[node name="GrassTileClean" type="Node3D"]
+
+[node name="Tile" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_ys3g2")
