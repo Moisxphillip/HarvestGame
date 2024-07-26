@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ckkjimpec5tn5"]
+[gd_scene load_steps=6 format=3 uid="uid://ckkjimpec5tn5"]
 
 [ext_resource type="PackedScene" uid="uid://bhlnohp7fyaib" path="res://scenes/grass_dense.tscn" id="2_8tpfs"]
 [ext_resource type="PackedScene" uid="uid://cimqup5f1n4d8" path="res://scenes/grass_clean.tscn" id="2_wjeep"]
 [ext_resource type="PackedScene" uid="uid://dsmsm7qn7kaf1" path="res://scenes/grass_medium.tscn" id="3_4o8p3"]
 [ext_resource type="PackedScene" uid="uid://clqb2alxvtowc" path="res://assets/v2/harvester.glb" id="4_80w2s"]
+[ext_resource type="PackedScene" uid="uid://b53hk8sasatjv" path="res://assets/v2/harvester_animated.glb" id="5_iggqb"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -79,3 +80,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10)
 
 [node name="harvester" parent="." instance=ExtResource("4_80w2s")]
+
+[node name="harvester_animated" parent="." instance=ExtResource("5_iggqb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.81204, 0, 0.084053)
