@@ -1,0 +1,85 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckkjimpec5tn5"]
+
+[ext_resource type="PackedScene" uid="uid://bhlnohp7fyaib" path="res://scenes/grass_dense.tscn" id="2_8tpfs"]
+[ext_resource type="PackedScene" uid="uid://cimqup5f1n4d8" path="res://scenes/grass_clean.tscn" id="2_wjeep"]
+[ext_resource type="PackedScene" uid="uid://dsmsm7qn7kaf1" path="res://scenes/grass_medium.tscn" id="3_4o8p3"]
+[ext_resource type="PackedScene" uid="uid://clqb2alxvtowc" path="res://assets/v2/harvester.glb" id="4_80w2s"]
+[ext_resource type="PackedScene" uid="uid://b53hk8sasatjv" path="res://assets/v2/harvester_animated.glb" id="5_iggqb"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="GrassTileClean" parent="." instance=ExtResource("2_wjeep")]
+
+[node name="GrassTileMedium2" parent="." instance=ExtResource("3_4o8p3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.97566)
+
+[node name="GrassTileMedium3" parent="." instance=ExtResource("3_4o8p3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 9.98783)
+
+[node name="GrassTileMedium7" parent="." instance=ExtResource("3_4o8p3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, -20)
+
+[node name="GrassTileMedium6" parent="." instance=ExtResource("3_4o8p3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -20)
+
+[node name="GrassTileMedium8" parent="." instance=ExtResource("3_4o8p3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -20)
+
+[node name="GrassTileMedium5" parent="." instance=ExtResource("3_4o8p3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -20)
+
+[node name="GrassTileMedium10" parent="." instance=ExtResource("3_4o8p3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -20)
+
+[node name="GrassTileMedium9" parent="." instance=ExtResource("3_4o8p3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20)
+
+[node name="GrassTileMedium4" parent="." instance=ExtResource("3_4o8p3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -10)
+
+[node name="GrassTileMedium" parent="." instance=ExtResource("3_4o8p3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+
+[node name="GrassTileDense4" parent="." instance=ExtResource("2_8tpfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 0)
+
+[node name="GrassTileDense3" parent="." instance=ExtResource("2_8tpfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 0)
+
+[node name="GrassTileDense2" parent="." instance=ExtResource("2_8tpfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+
+[node name="GrassTileDense13" parent="." instance=ExtResource("2_8tpfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 9.97301)
+
+[node name="GrassTileDense12" parent="." instance=ExtResource("2_8tpfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 9.9865)
+
+[node name="GrassTileDense6" parent="." instance=ExtResource("2_8tpfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 10)
+
+[node name="GrassTileDense9" parent="." instance=ExtResource("2_8tpfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, -10)
+
+[node name="GrassTileDense11" parent="." instance=ExtResource("2_8tpfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -10)
+
+[node name="GrassTileDense10" parent="." instance=ExtResource("2_8tpfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -10)
+
+[node name="GrassTileDense8" parent="." instance=ExtResource("2_8tpfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -10)
+
+[node name="GrassTileDense7" parent="." instance=ExtResource("2_8tpfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+
+[node name="GrassTileDense5" parent="." instance=ExtResource("2_8tpfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="GrassTileDense" parent="." instance=ExtResource("2_8tpfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10)
+
+[node name="harvester" parent="." instance=ExtResource("4_80w2s")]
+
+[node name="harvester_animated" parent="." instance=ExtResource("5_iggqb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.81204, 0, 0.084053)
