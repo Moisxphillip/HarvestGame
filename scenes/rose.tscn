@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2qgenhtd5hkt"]
+
+[ext_resource type="PackedScene" uid="uid://d260dstdgknaq" path="res://scenes/plant.tscn" id="1_dp8bu"]
+[ext_resource type="PackedScene" uid="uid://cef5ev24q3twx" path="res://assets/v2/rose.glb" id="2_82dai"]
+
+[node name="Plant" instance=ExtResource("1_dp8bu")]
+stepTime = 15.0
+
+[node name="rose" parent="Model" index="0" instance=ExtResource("2_82dai")]

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://h00840cilnj" path="res://assets/v2/dirt_mound.glb" id="4_kmitu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bbixg"]
-size = Vector3(1.44538, 0.137909, 1.45837)
+size = Vector3(1.4401, 0.137909, 1.44131)
 
 [node name="SoilPlot" type="Area3D"]
 collision_layer = 4
@@ -13,7 +13,7 @@ collision_mask = 2
 script = ExtResource("1_kxu0l")
 
 [node name="Shape" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000680305, 0.0349884, 0.000398699)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000332557, 0.0349884, -0.00040954)
 shape = SubResource("BoxShape3D_bbixg")
 
 [node name="garden_bed" parent="." instance=ExtResource("3_hyicd")]
