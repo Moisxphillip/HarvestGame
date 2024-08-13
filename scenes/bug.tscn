@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dauqqq67es8kv"]
+
+[ext_resource type="PackedScene" uid="uid://164n2ypiq77d" path="res://assets/v2/bug.glb" id="1_66r3k"]
+
+[node name="Bug" type="Node3D"]
+
+[node name="bug" parent="." instance=ExtResource("1_66r3k")]
+transform = Transform3D(-0.613252, 0, 0.789888, 0, 1, 0, -0.789888, 0, -0.613252, -0.123971, 0.0147251, -0.149031)
+
+[node name="bug2" parent="." instance=ExtResource("1_66r3k")]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0.118713, 0.244866)
+
+[node name="bug3" parent="." instance=ExtResource("1_66r3k")]
+transform = Transform3D(-0.931228, 0, -0.364438, 0, 1, 0, 0.364438, 0, -0.931228, 0.287513, 0, 0)

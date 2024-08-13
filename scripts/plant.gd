@@ -1,3 +1,4 @@
+class_name Plant
 extends StaticBody3D
 
 @export var stepTime: float  = 5.0

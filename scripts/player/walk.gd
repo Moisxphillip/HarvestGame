@@ -17,10 +17,17 @@ func enter(_msg := {}) -> void:
 
 
 func handle_input(_event: InputEvent) -> void:
-    if Input.is_action_just_pressed("Interact") and entity.interaction.is_colliding():
+    var type = 0
+    if Input.is_action_just_pressed("1"):
+        type=1
+    elif Input.is_action_just_pressed("2"):
+        type=2
+    elif Input.is_action_just_pressed("3"):
+        type=3
+    if type != 0 or Input.is_action_just_pressed("Interact") and entity.interaction.is_colliding():
         entity.velocity.x = move_toward(entity.velocity.x, 0, walkSpeed)
         entity.velocity.z = move_toward(entity.velocity.z, 0, walkSpeed)
-        transition_to("Interact")
+        transition_to("Interact",{"type":str(type)})
         return
     
     var input_dir = Input.get_vector("Left", "Right", "Up", "Down")
