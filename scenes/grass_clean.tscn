@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cimqup5f1n4d8"]
+[gd_scene load_steps=4 format=3 uid="uid://cimqup5f1n4d8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cis5h"]
 albedo_color = Color(0, 0.513002, 0, 1)
@@ -7,7 +7,16 @@ albedo_color = Color(0, 0.513002, 0, 1)
 material = SubResource("StandardMaterial3D_cis5h")
 size = Vector2(10, 10)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_6ew4n"]
+size = Vector3(10.0087, 1, 10.0053)
+
 [node name="GrassTileClean" type="Node3D"]
 
 [node name="Tile" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_ys3g2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0083847, -0.511158, 0.00209045)
+shape = SubResource("BoxShape3D_6ew4n")

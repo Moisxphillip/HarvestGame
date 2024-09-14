@@ -14,6 +14,7 @@ func enter(_msg := {}) -> void:
     #if _msg.has("moveDirection"):
         #move(_msg["moveDirection"]*walkSpeed) 
     entity.animation.play("Walking_A")
+    entity.animation2.play("Walk")
 
 
 func handle_input(_event: InputEvent) -> void:
@@ -36,6 +37,7 @@ func handle_input(_event: InputEvent) -> void:
         entity.velocity.x = direction.x * walkSpeed
         entity.velocity.z = direction.z * walkSpeed
         entity.mesh.rotation.y = lerp_angle(entity.mesh.rotation.y, atan2(direction.x, direction.z),angularAccel)
+        entity.mesh2.rotation.y = lerp_angle(entity.mesh.rotation.y, atan2(direction.x, direction.z),angularAccel)
         return
       
     entity.velocity.x = move_toward(entity.velocity.x, 0, walkSpeed)

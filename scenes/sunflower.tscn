@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxb4lubudesig"]
-
-[ext_resource type="PackedScene" uid="uid://d260dstdgknaq" path="res://scenes/plant.tscn" id="1_y60qx"]
-[ext_resource type="PackedScene" uid="uid://18qkfcmma40r" path="res://assets/v2/sunflower.glb" id="2_6kvrf"]
-
-[node name="Plant" instance=ExtResource("1_y60qx")]
-stepTime = 10.0
-
-[node name="sunflower" parent="Model" index="0" instance=ExtResource("2_6kvrf")]
