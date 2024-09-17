@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://5h0701mmxedm"]
+
+[ext_resource type="PackedScene" uid="uid://dmdhh5t5f2j6p" path="res://assets/final/garden_bed_dirt.glb" id="1_btdaq"]
+
+[node name="garden_bed_dirt" instance=ExtResource("1_btdaq")]

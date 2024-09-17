@@ -1,11 +1,336 @@
-[gd_scene load_steps=5 format=3 uid="uid://0d1tmm0xgtwa"]
+[gd_scene load_steps=25 format=3 uid="uid://0d1tmm0xgtwa"]
 
 [ext_resource type="Script" path="res://scripts/soil_plot.gd" id="1_kxu0l"]
-[ext_resource type="PackedScene" uid="uid://bouwcxcvhb3u7" path="res://assets/v2/garden_bed.glb" id="3_hyicd"]
-[ext_resource type="PackedScene" uid="uid://h00840cilnj" path="res://assets/v2/dirt_mound.glb" id="4_kmitu"]
+[ext_resource type="PackedScene" uid="uid://dccik1ee5wh31" path="res://assets/final/garden_bed_frame.glb" id="2_th5ur"]
+[ext_resource type="PackedScene" uid="uid://dmdhh5t5f2j6p" path="res://assets/final/garden_bed_dirt.glb" id="3_6objo"]
+[ext_resource type="PackedScene" uid="uid://5c1a7is841xg" path="res://assets/final/pest_bug.glb" id="4_4215b"]
+[ext_resource type="PackedScene" uid="uid://d3yk0tn3gbukb" path="res://assets/final/garden_bed_wet_dirt.glb" id="4_aaqrj"]
+[ext_resource type="Script" path="res://scripts/worms.gd" id="4_jyoss"]
+[ext_resource type="PackedScene" uid="uid://bcxsh1kia1ogs" path="res://assets/final/pest_gecko.glb" id="5_e8vqg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bbixg"]
 size = Vector3(1.4401, 0.137909, 1.44131)
+
+[sub_resource type="Animation" id="Animation_v87il"]
+resource_name = "Wet"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("garden_bed_dirt:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("garden_bed_wet_dirt:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_n8q3r"]
+resource_name = "Dry"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("garden_bed_wet_dirt:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("garden_bed_dirt:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_wamck"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("garden_bed_wet_dirt:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("garden_bed_dirt:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yj6ie"]
+_data = {
+"Dry": SubResource("Animation_n8q3r"),
+"RESET": SubResource("Animation_wamck"),
+"Wet": SubResource("Animation_v87il")
+}
+
+[sub_resource type="Animation" id="Animation_1t7ul"]
+resource_name = "Idle"
+length = 1.2
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.0670032, 0, 0), Vector3(-0.0172225, 0.396153, 0.0172749)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_wnrx4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0670032, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_m6nqi"]
+resource_name = "Hide"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4osre"]
+_data = {
+"Hide": SubResource("Animation_m6nqi"),
+"Idle": SubResource("Animation_1t7ul"),
+"RESET": SubResource("Animation_wnrx4")
+}
+
+[sub_resource type="Animation" id="Animation_t22fu"]
+resource_name = "Idle"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.338337, 1.8045, -0.0788492), Vector3(-0.338337, 2.37084, -0.0788492)]
+}
+
+[sub_resource type="Animation" id="Animation_hbuoa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.338337, 1.8045, -0.0788492)]
+}
+
+[sub_resource type="Animation" id="Animation_r4hig"]
+resource_name = "Hide"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p3vlc"]
+_data = {
+"Hide": SubResource("Animation_r4hig"),
+"Idle": SubResource("Animation_t22fu"),
+"RESET": SubResource("Animation_hbuoa")
+}
+
+[sub_resource type="Animation" id="Animation_63tvw"]
+resource_name = "Idle"
+length = 1.4
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.112713, -0.194726, -0.378387), Vector3(-0.112713, 0.686072, -0.378387)]
+}
+
+[sub_resource type="Animation" id="Animation_ck54p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.112713, -0.194726, -0.378387)]
+}
+
+[sub_resource type="Animation" id="Animation_0l30v"]
+resource_name = "Hide"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kksd3"]
+_data = {
+"Hide": SubResource("Animation_0l30v"),
+"Idle": SubResource("Animation_63tvw"),
+"RESET": SubResource("Animation_ck54p")
+}
 
 [node name="SoilPlot" type="Area3D"]
 collision_layer = 4
@@ -16,8 +341,67 @@ script = ExtResource("1_kxu0l")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000332557, 0.0349884, -0.00040954)
 shape = SubResource("BoxShape3D_bbixg")
 
-[node name="garden_bed" parent="." instance=ExtResource("3_hyicd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+[node name="garden_bed_frame" parent="." instance=ExtResource("2_th5ur")]
 
-[node name="dirt_mound" parent="." instance=ExtResource("4_kmitu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+[node name="AnimationWatered" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yj6ie")
+}
+
+[node name="garden_bed_dirt" parent="." instance=ExtResource("3_6objo")]
+
+[node name="garden_bed_wet_dirt" parent="." instance=ExtResource("4_aaqrj")]
+transform = Transform3D(2.33, 0, 0, 0, 2.33, 0, 0, 0, 2.33, 0, 0.11797, -0.596307)
+visible = false
+
+[node name="Worms" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.146883, 0)
+script = ExtResource("4_jyoss")
+
+[node name="pest_bug" parent="Worms" instance=ExtResource("4_4215b")]
+transform = Transform3D(1, 0, 0, 0, 0.997756, -0.066953, 0, 0.066953, 0.997756, -0.417964, -0.0927421, -0.38184)
+
+[node name="Animation" type="AnimationPlayer" parent="Worms/pest_bug"]
+libraries = {
+"": SubResource("AnimationLibrary_4osre")
+}
+
+[node name="pest_bug2" parent="Worms" instance=ExtResource("4_4215b")]
+transform = Transform3D(-0.205425, -0.340133, 0.917665, -0.0743021, 0.940377, 0.331919, -0.975848, 1.49012e-08, -0.21845, -0.279504, -0.028776, 0.414441)
+
+[node name="Animation" type="AnimationPlayer" parent="Worms/pest_bug2"]
+libraries = {
+"": SubResource("AnimationLibrary_p3vlc")
+}
+
+[node name="pest_bug3" parent="Worms" instance=ExtResource("4_4215b")]
+transform = Transform3D(0.903659, 0.382665, -0.19227, -0.367078, 0.923365, 0.112475, 0.220576, -0.0310607, 0.974875, 0.283918, -0.056477, 0.329779)
+
+[node name="Animation" type="AnimationPlayer" parent="Worms/pest_bug3"]
+libraries = {
+"": SubResource("AnimationLibrary_kksd3")
+}
+
+[node name="Gecko" type="Node3D" parent="."]
+transform = Transform3D(0.162362, 0, -0.986731, 0, 1, 0, 0.986731, 0, 0.162362, 0, 0.213006, 0.502842)
+
+[node name="pest_gecko" parent="Gecko" instance=ExtResource("5_e8vqg")]
+transform = Transform3D(0.994661, 0.103193, -0.000878513, -0.103193, 0.994517, -0.0169799, -0.000878498, 0.0169799, 0.999856, 0.00230721, -0.00711316, 0.000379644)
+
+[node name="PestTimer" type="Timer" parent="."]
+wait_time = 8.0
+
+[node name="GeckoTimer" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="PestTick" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="WateredTimer" type="Timer" parent="."]
+wait_time = 15.0
+
+[connection signal="timeout" from="PestTimer" to="." method="_on_pest_timer_timeout"]
+[connection signal="timeout" from="GeckoTimer" to="." method="_on_gecko_timer_timeout"]
+[connection signal="timeout" from="PestTick" to="." method="_on_pest_tick_timeout"]
+[connection signal="timeout" from="WateredTimer" to="." method="_on_watered_timer_timeout"]

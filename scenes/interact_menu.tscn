@@ -1,0 +1,93 @@
+[gd_scene load_steps=4 format=3 uid="uid://dengbwxl4ch30"]
+
+[ext_resource type="Script" path="res://scripts/interact_menu.gd" id="1_tuhtg"]
+[ext_resource type="FontFile" uid="uid://uqklujal5bno" path="res://assets/font/Hexenkoetel.ttf" id="2_cdq2r"]
+
+[sub_resource type="Theme" id="Theme_3x5as"]
+
+[node name="InteractMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_3x5as")
+script = ExtResource("1_tuhtg")
+
+[node name="MainOptions" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainOptions"]
+layout_mode = 2
+
+[node name="Plant" type="Button" parent="MainOptions/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cdq2r")
+theme_override_font_sizes/font_size = 25
+text = "Plant
+"
+
+[node name="Harvest" type="Button" parent="MainOptions/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cdq2r")
+theme_override_font_sizes/font_size = 25
+text = "Harvest"
+
+[node name="Water" type="Button" parent="MainOptions/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cdq2r")
+theme_override_font_sizes/font_size = 25
+text = "Water"
+
+[node name="Clear Pests" type="Button" parent="MainOptions/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cdq2r")
+theme_override_font_sizes/font_size = 25
+text = "Clear Pests ($ 1)"
+
+[node name="Close" type="Button" parent="MainOptions/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cdq2r")
+theme_override_font_sizes/font_size = 25
+text = "Close
+"
+
+[node name="PlantOptions" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 163.0
+offset_right = 287.0
+offset_bottom = 101.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PlantOptions"]
+layout_mode = 2
+
+[node name="Ype" type="Button" parent="PlantOptions/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cdq2r")
+theme_override_font_sizes/font_size = 25
+text = "Ype ($ 1)"
+
+[node name="Sunflower" type="Button" parent="PlantOptions/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cdq2r")
+theme_override_font_sizes/font_size = 25
+text = "Sunflower ($ 2)"
+
+[node name="Rose" type="Button" parent="PlantOptions/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cdq2r")
+theme_override_font_sizes/font_size = 25
+text = "Rose ($ 3)"
+
+[connection signal="pressed" from="MainOptions/VBoxContainer/Plant" to="." method="_on_plant_pressed"]
+[connection signal="pressed" from="MainOptions/VBoxContainer/Harvest" to="." method="_on_harvest_pressed"]
+[connection signal="pressed" from="MainOptions/VBoxContainer/Water" to="." method="_on_water_pressed"]
+[connection signal="pressed" from="MainOptions/VBoxContainer/Clear Pests" to="." method="_on_clear_pests_pressed"]
+[connection signal="pressed" from="MainOptions/VBoxContainer/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="PlantOptions/VBoxContainer/Ype" to="." method="_on_ype_pressed"]
+[connection signal="pressed" from="PlantOptions/VBoxContainer/Sunflower" to="." method="_on_sunflower_pressed"]
+[connection signal="pressed" from="PlantOptions/VBoxContainer/Rose" to="." method="_on_rose_pressed"]

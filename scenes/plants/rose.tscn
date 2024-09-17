@@ -1,9 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://d2qgenhtd5hkt"]
 
 [ext_resource type="PackedScene" uid="uid://d260dstdgknaq" path="res://scenes/primitives/plant.tscn" id="1_gqqla"]
-[ext_resource type="PackedScene" uid="uid://cef5ev24q3twx" path="res://assets/v2/rose.glb" id="2_ioyrt"]
+[ext_resource type="PackedScene" uid="uid://cc4yxtma3yqaq" path="res://assets/final/flower/rose.glb" id="3_awvcc"]
 
 [node name="Rose" instance=ExtResource("1_gqqla")]
-stepTime = 15.0
+stepTime = 12.0
+pestChance = 0.25
 
-[node name="rose" parent="Model" index="0" instance=ExtResource("2_ioyrt")]
+[node name="rose2" parent="Model" index="0" instance=ExtResource("3_awvcc")]

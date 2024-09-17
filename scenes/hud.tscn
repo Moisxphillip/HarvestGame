@@ -1,70 +1,84 @@
-[gd_scene load_steps=2 format=3 uid="uid://buldajm63idvc"]
+[gd_scene load_steps=4 format=3 uid="uid://buldajm63idvc"]
 
 [ext_resource type="Script" path="res://scripts/hud.gd" id="1_h4m86"]
+[ext_resource type="PackedScene" uid="uid://dengbwxl4ch30" path="res://scenes/interact_menu.tscn" id="2_g5jod"]
+[ext_resource type="LabelSettings" uid="uid://dtyk6yp1dln2j" path="res://scenes/LabelSettings.tres" id="2_ques6"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -16.0
+offset_right = -20.0
+offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_h4m86")
 
-[node name="Money" type="RichTextLabel" parent="."]
+[node name="Money" type="Label" parent="."]
 layout_mode = 0
-offset_right = 60.0
-offset_bottom = 25.0
+offset_left = 39.0
+offset_top = 72.0
+offset_right = 190.0
+offset_bottom = 125.0
 text = "Money:"
+label_settings = ExtResource("2_ques6")
 
-[node name="Value" type="RichTextLabel" parent="."]
+[node name="Value" type="Label" parent="."]
 layout_mode = 0
-offset_left = 60.0
-offset_right = 186.0
-offset_bottom = 25.0
+offset_left = 190.0
+offset_top = 72.0
+offset_right = 426.0
+offset_bottom = 125.0
 text = "0"
+label_settings = ExtResource("2_ques6")
 
-[node name="Rose" type="RichTextLabel" parent="."]
+[node name="TimeLeft" type="Label" parent="."]
 layout_mode = 0
-offset_top = 25.0
-offset_right = 46.0
-offset_bottom = 48.0
-text = "Rose:"
-
-[node name="RoseQty" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 46.0
-offset_top = 25.0
-offset_right = 172.0
-offset_bottom = 50.0
-text = "0"
-
-[node name="Sunflower" type="RichTextLabel" parent="."]
-layout_mode = 0
+offset_left = 518.0
 offset_top = 48.0
-offset_right = 87.0
-offset_bottom = 71.0
-text = "Sunflower:"
+offset_right = 707.0
+offset_bottom = 101.0
+text = "Time left:"
+label_settings = ExtResource("2_ques6")
 
-[node name="SunflowerQty" type="RichTextLabel" parent="."]
+[node name="Minutes" type="Label" parent="."]
 layout_mode = 0
-offset_left = 87.0
+offset_left = 707.0
 offset_top = 48.0
-offset_right = 213.0
-offset_bottom = 73.0
+offset_right = 742.0
+offset_bottom = 101.0
 text = "0"
+label_settings = ExtResource("2_ques6")
+horizontal_alignment = 2
 
-[node name="Ype" type="RichTextLabel" parent="."]
+[node name="Sep" type="Label" parent="."]
 layout_mode = 0
-offset_top = 71.0
-offset_right = 36.0
-offset_bottom = 94.0
-text = "Ype:"
+offset_left = 742.0
+offset_top = 48.0
+offset_right = 759.0
+offset_bottom = 101.0
+text = ":"
+label_settings = ExtResource("2_ques6")
+horizontal_alignment = 1
 
-[node name="YpeQty" type="RichTextLabel" parent="."]
+[node name="Seconds" type="Label" parent="."]
 layout_mode = 0
-offset_left = 38.0
-offset_top = 71.0
-offset_right = 164.0
-offset_bottom = 96.0
-text = "0"
+offset_left = 759.0
+offset_top = 48.0
+offset_right = 817.0
+offset_bottom = 101.0
+text = "00"
+label_settings = ExtResource("2_ques6")
+
+[node name="InteractMenu" parent="." instance=ExtResource("2_g5jod")]
+layout_mode = 1
+offset_left = 243.0
+offset_top = 288.0
+offset_right = 243.0
+offset_bottom = 288.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 300.0

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cc4yxtma3yqaq"
-path="res://.godot/imported/flower_rose.glb-f2e9771ab098173dda3f775d0a4497de.scn"
+uid="uid://lg86c14o5go3"
+path="res://.godot/imported/sunflower.glb-8f9ecc2bc90de1bf372d3679d7c4294d.scn"
 
 [deps]
 
-source_file="res://assets/final/flower_rose.glb"
-dest_files=["res://.godot/imported/flower_rose.glb-f2e9771ab098173dda3f775d0a4497de.scn"]
+source_file="res://assets/final/flower/sunflower.glb"
+dest_files=["res://.godot/imported/sunflower.glb-8f9ecc2bc90de1bf372d3679d7c4294d.scn"]
 
 [params]
 
