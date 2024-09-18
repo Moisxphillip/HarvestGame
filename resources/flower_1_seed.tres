@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dfypqrsp1d1kb"]
+
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="1_3twb2"]
+[ext_resource type="Texture2D" uid="uid://dycdjev6j2khq" path="res://assets/ui/2227504.png" id="1_kgqkd"]
+
+[resource]
+script = ExtResource("1_3twb2")
+type = 0
+item_name = "Flowr seed"
+stackable = true
+count = 1
+price_buy = 5.0
+price_sell = 3.0
+sellable = true
+description = "Seed flor flower"
+item_texture = ExtResource("1_kgqkd")

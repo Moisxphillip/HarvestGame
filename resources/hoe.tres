@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://b6aqh8jgqcbtp"]
+
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="1_4iw2v"]
+[ext_resource type="Texture2D" uid="uid://bee85garl7fgg" path="res://assets/ui/2168028.png" id="1_k1cq1"]
+
+[resource]
+script = ExtResource("1_4iw2v")
+type = 1
+item_name = "Hoe"
+stackable = false
+count = 0
+price_buy = 0.0
+price_sell = 0.0
+sellable = false
+description = "Hoe for preparing crops"
+item_texture = ExtResource("1_k1cq1")

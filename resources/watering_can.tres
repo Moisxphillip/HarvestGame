@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://caemk8xsihvhn"]
+
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="1_c40am"]
+[ext_resource type="Texture2D" uid="uid://dm0ucqmxhobdh" path="res://assets/ui/images.png" id="1_u2o4p"]
+
+[resource]
+script = ExtResource("1_c40am")
+type = 1
+item_name = "Watering Can"
+stackable = false
+count = 0
+price_buy = 0.0
+price_sell = 0.0
+sellable = false
+description = "Water the crops"
+item_texture = ExtResource("1_u2o4p")

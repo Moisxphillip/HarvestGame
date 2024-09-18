@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3 uid="uid://bu60dvtc5ldse"]
+
+[ext_resource type="Texture2D" uid="uid://df8mvm78wgmuw" path="res://icon.svg" id="1_kp0hd"]
+[ext_resource type="Script" path="res://scenes/ShortcutItems.gd" id="2_83ypu"]
+[ext_resource type="PackedScene" uid="uid://c5efk21nxaede" path="res://scenes/shop.tscn" id="2_qpiug"]
+[ext_resource type="Script" path="res://scripts/ui/bag_slot.gd" id="3_c2jc5"]
+[ext_resource type="PackedScene" uid="uid://biofoc6bw31p0" path="res://scenes/bag.tscn" id="3_fdx86"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="ShopButton" type="Button" parent="."]
+offset_left = 1158.0
+offset_top = 630.0
+offset_right = 1249.0
+offset_bottom = 696.0
+text = "SHOP
+"
+
+[node name="BagButton" type="Button" parent="."]
+offset_left = 1051.0
+offset_top = 633.0
+offset_right = 1137.0
+offset_bottom = 693.0
+text = "BAG"
+
+[node name="Perfil" type="Panel" parent="."]
+offset_left = 18.0
+offset_top = 14.0
+offset_right = 189.0
+offset_bottom = 87.0
+
+[node name="Char" type="Sprite2D" parent="Perfil"]
+position = Vector2(31, 38)
+scale = Vector2(0.417969, 0.417969)
+texture = ExtResource("1_kp0hd")
+
+[node name="MoneyLabel" type="Label" parent="Perfil"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 15.0
+offset_right = 112.0
+offset_bottom = 38.0
+text = "200g"
+
+[node name="ShortcutItems" type="GridContainer" parent="."]
+offset_left = 21.0
+offset_top = 594.0
+offset_right = 304.0
+offset_bottom = 662.0
+columns = 4
+script = ExtResource("2_83ypu")
+
+[node name="BagSlot" type="PanelContainer" parent="ShortcutItems"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("3_c2jc5")
+
+[node name="BagSlot2" type="PanelContainer" parent="ShortcutItems"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("3_c2jc5")
+
+[node name="BagSlot3" type="PanelContainer" parent="ShortcutItems"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("3_c2jc5")
+
+[node name="BagSlot4" type="PanelContainer" parent="ShortcutItems"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("3_c2jc5")
+
+[node name="Shop" parent="." instance=ExtResource("2_qpiug")]
+visible = false
+
+[node name="Bag" parent="." instance=ExtResource("3_fdx86")]

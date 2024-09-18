@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://diayllxgvaiqy"]
+
+[ext_resource type="Script" path="res://scripts/ui/bag_slot.gd" id="1_uhxoo"]
+
+[node name="ItemSlot" type="Panel"]
+custom_minimum_size = Vector2(32, 32)
+script = ExtResource("1_uhxoo")
