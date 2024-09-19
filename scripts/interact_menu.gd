@@ -28,6 +28,27 @@ func enable()->void:
         $MainOptions/VBoxContainer/Water.disabled = true
     else:
         $MainOptions/VBoxContainer/Water.disabled = false
+        
+    if hud.money < 3:
+        $PlantOptions/VBoxContainer/Rose.disabled = true
+    else:
+        $PlantOptions/VBoxContainer/Rose.disabled = false
+        
+    if hud.money < 2:
+        $PlantOptions/VBoxContainer/Sunflower.disabled = true
+    else:
+        $PlantOptions/VBoxContainer/Sunflower.disabled = false
+        
+        
+    if hud.money < 1:
+        $PlantOptions/VBoxContainer/Ype.disabled = true
+        $"MainOptions/VBoxContainer/Clear Pests".disabled = true
+        
+    else:
+        $"MainOptions/VBoxContainer/Clear Pests".disabled = false
+        $PlantOptions/VBoxContainer/Ype.disabled = false
+        
+
     
 func _process(_delta: float) -> void:
     if soilPlot == null : return
@@ -46,6 +67,23 @@ func _process(_delta: float) -> void:
         $MainOptions/VBoxContainer/Water.disabled = true
     else:
         $MainOptions/VBoxContainer/Water.disabled = false
+        
+    if hud.money < 3:
+        $PlantOptions/VBoxContainer/Rose.disabled = true
+    else:
+        $PlantOptions/VBoxContainer/Rose.disabled = false
+        
+    if hud.money < 2:
+        $PlantOptions/VBoxContainer/Sunflower.disabled = true
+    else:
+        $PlantOptions/VBoxContainer/Sunflower.disabled = false
+        
+    if hud.money < 1:
+        $PlantOptions/VBoxContainer/Ype.disabled = true
+        $"MainOptions/VBoxContainer/Clear Pests".disabled = true
+    else:
+        $"MainOptions/VBoxContainer/Clear Pests".disabled = false
+        $PlantOptions/VBoxContainer/Ype.disabled = false      
         
            
 func disable()->void:
@@ -71,6 +109,7 @@ func _on_water_pressed() -> void:
 
 func _on_clear_pests_pressed() -> void:
     soilPlot.interact("Kill")
+    player.smachine.state.transition_to("ClearPests")
     disable()
 
 

@@ -11,33 +11,6 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_bbixg"]
 size = Vector3(1.4401, 0.137909, 1.44131)
 
-[sub_resource type="Animation" id="Animation_v87il"]
-resource_name = "Wet"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("garden_bed_dirt:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("garden_bed_wet_dirt:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
 [sub_resource type="Animation" id="Animation_n8q3r"]
 resource_name = "Dry"
 tracks/0/type = "value"
@@ -92,11 +65,53 @@ tracks/1/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_v87il"]
+resource_name = "Wet"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("garden_bed_dirt:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("garden_bed_wet_dirt:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yj6ie"]
 _data = {
 "Dry": SubResource("Animation_n8q3r"),
 "RESET": SubResource("Animation_wamck"),
 "Wet": SubResource("Animation_v87il")
+}
+
+[sub_resource type="Animation" id="Animation_m6nqi"]
+resource_name = "Hide"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_1t7ul"]
@@ -155,7 +170,14 @@ tracks/1/keys = {
 "values": [true]
 }
 
-[sub_resource type="Animation" id="Animation_m6nqi"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4osre"]
+_data = {
+"Hide": SubResource("Animation_m6nqi"),
+"Idle": SubResource("Animation_1t7ul"),
+"RESET": SubResource("Animation_wnrx4")
+}
+
+[sub_resource type="Animation" id="Animation_r4hig"]
 resource_name = "Hide"
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -168,13 +190,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_4osre"]
-_data = {
-"Hide": SubResource("Animation_m6nqi"),
-"Idle": SubResource("Animation_1t7ul"),
-"RESET": SubResource("Animation_wnrx4")
 }
 
 [sub_resource type="Animation" id="Animation_t22fu"]
@@ -232,7 +247,14 @@ tracks/1/keys = {
 "values": [Vector3(-0.338337, 1.8045, -0.0788492)]
 }
 
-[sub_resource type="Animation" id="Animation_r4hig"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p3vlc"]
+_data = {
+"Hide": SubResource("Animation_r4hig"),
+"Idle": SubResource("Animation_t22fu"),
+"RESET": SubResource("Animation_hbuoa")
+}
+
+[sub_resource type="Animation" id="Animation_0l30v"]
 resource_name = "Hide"
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -245,13 +267,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_p3vlc"]
-_data = {
-"Hide": SubResource("Animation_r4hig"),
-"Idle": SubResource("Animation_t22fu"),
-"RESET": SubResource("Animation_hbuoa")
 }
 
 [sub_resource type="Animation" id="Animation_63tvw"]
@@ -310,21 +325,6 @@ tracks/1/keys = {
 "values": [Vector3(-0.112713, -0.194726, -0.378387)]
 }
 
-[sub_resource type="Animation" id="Animation_0l30v"]
-resource_name = "Hide"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kksd3"]
 _data = {
 "Hide": SubResource("Animation_0l30v"),
@@ -359,7 +359,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.146883, 0)
 script = ExtResource("4_jyoss")
 
 [node name="pest_bug" parent="Worms" instance=ExtResource("4_4215b")]
-transform = Transform3D(1, 0, 0, 0, 0.997756, -0.066953, 0, 0.066953, 0.997756, -0.417964, -0.0927421, -0.38184)
+transform = Transform3D(1, 0, 0, 0, 0.997756, -0.0669531, 0, 0.0669531, 0.997756, -0.417964, -0.0927421, -0.38184)
 
 [node name="Animation" type="AnimationPlayer" parent="Worms/pest_bug"]
 libraries = {
@@ -367,7 +367,7 @@ libraries = {
 }
 
 [node name="pest_bug2" parent="Worms" instance=ExtResource("4_4215b")]
-transform = Transform3D(-0.205425, -0.340133, 0.917665, -0.0743021, 0.940377, 0.331919, -0.975848, 1.49012e-08, -0.21845, -0.279504, -0.028776, 0.414441)
+transform = Transform3D(-0.205429, -0.340134, 0.917664, -0.074302, 0.940377, 0.331919, -0.975847, 1.37836e-06, -0.218453, -0.279504, -0.028776, 0.414441)
 
 [node name="Animation" type="AnimationPlayer" parent="Worms/pest_bug2"]
 libraries = {
@@ -375,7 +375,7 @@ libraries = {
 }
 
 [node name="pest_bug3" parent="Worms" instance=ExtResource("4_4215b")]
-transform = Transform3D(0.903659, 0.382665, -0.19227, -0.367078, 0.923365, 0.112475, 0.220576, -0.0310607, 0.974875, 0.283918, -0.056477, 0.329779)
+transform = Transform3D(0.903659, 0.382664, -0.19227, -0.367078, 0.923365, 0.112474, 0.220575, -0.0310606, 0.974875, 0.283918, -0.056477, 0.329779)
 
 [node name="Animation" type="AnimationPlayer" parent="Worms/pest_bug3"]
 libraries = {

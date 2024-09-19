@@ -26,165 +26,14 @@ environment = SubResource("Environment_xy52v")
 
 [node name="Player" parent="." instance=ExtResource("2_w26p3")]
 
-[node name="Floor" type="Node3D" parent="."]
-
-[node name="GrassTileClean" parent="Floor" instance=ExtResource("6_si63b")]
-
-[node name="GrassTileClean2" parent="Floor" instance=ExtResource("6_si63b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
-
-[node name="GrassTileMedium" parent="Floor" instance=ExtResource("7_06g8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10)
-
-[node name="GrassTileMedium2" parent="Floor" instance=ExtResource("7_06g8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
-
-[node name="GrassTileMedium3" parent="Floor" instance=ExtResource("7_06g8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 10)
-
-[node name="GrassTileDense" parent="Floor" instance=ExtResource("4_2x2kb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
-
-[node name="GrassTileClean3" parent="Floor" instance=ExtResource("6_si63b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 10)
-
-[node name="GrassTileClean4" parent="Floor" instance=ExtResource("6_si63b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
-
-[node name="GrassTileClean5" parent="Floor" instance=ExtResource("6_si63b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 0)
-
-[node name="GrassTileClean6" parent="Floor" instance=ExtResource("6_si63b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 10)
-
-[node name="GrassTileMedium4" parent="Floor" instance=ExtResource("7_06g8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -10)
-
-[node name="GrassTileMedium5" parent="Floor" instance=ExtResource("7_06g8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -10)
-
-[node name="GrassTileMedium6" parent="Floor" instance=ExtResource("7_06g8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
-
-[node name="GrassTileMedium7" parent="Floor" instance=ExtResource("7_06g8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -10)
-
-[node name="GrassTileDense2" parent="Floor" instance=ExtResource("4_2x2kb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -10)
-
-[node name="Props" type="Node3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.1875, 0, -1.37661)
-
-[node name="Fence" parent="Props" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
-
-[node name="Fence2" parent="Props" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
-
-[node name="Fence3" parent="Props" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
-
-[node name="Fence4" parent="Props" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
-
-[node name="Fence5" parent="Props" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
-
-[node name="Fence6" parent="Props" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -9.01738)
-
-[node name="Fence7" parent="Props" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10.0174)
-
-[node name="Fence8" parent="Props" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -11.0174)
-
-[node name="Props2" type="Node3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.1875, 0, -1.37661)
-
-[node name="Fence" parent="Props2" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
-
-[node name="Fence2" parent="Props2" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
-
-[node name="Fence3" parent="Props2" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
-
-[node name="Fence4" parent="Props2" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
-
-[node name="Fence5" parent="Props2" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
-
-[node name="Fence6" parent="Props2" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -9.01738)
-
-[node name="Fence7" parent="Props2" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10.0174)
-
-[node name="Fence8" parent="Props2" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -11.0174)
-
-[node name="Props3" type="Node3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.8125, 0, -1.37661)
-
-[node name="Fence" parent="Props3" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
-
-[node name="Fence2" parent="Props3" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
-
-[node name="Fence3" parent="Props3" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
-
-[node name="Fence4" parent="Props3" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
-
-[node name="Fence5" parent="Props3" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
-
-[node name="Fence6" parent="Props3" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -9.01738)
-
-[node name="Fence7" parent="Props3" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10.0174)
-
-[node name="Fence8" parent="Props3" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -11.0174)
-
-[node name="Props4" type="Node3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.1875, 0, -1.37661)
-
-[node name="Fence" parent="Props4" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
-
-[node name="Fence2" parent="Props4" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
-
-[node name="Fence3" parent="Props4" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
-
-[node name="Fence4" parent="Props4" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
-
-[node name="Fence5" parent="Props4" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
-
-[node name="Fence6" parent="Props4" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -9.01738)
-
-[node name="Fence7" parent="Props4" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10.0174)
-
-[node name="Fence8" parent="Props4" instance=ExtResource("4_36wb0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -11.0174)
-
 [node name="Soil" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.161773, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.25443, -0.161773, -4)
 
 [node name="SoilPlot" parent="Soil" instance=ExtResource("6_kiset")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.37367, 0.2, 2)
+
+[node name="SoilPlot6" parent="Soil" instance=ExtResource("6_kiset")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37367, 0.2, 2)
 
 [node name="SoilPlot2" parent="Soil" instance=ExtResource("6_kiset")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.37367, 0.2, 2)
@@ -192,5 +41,427 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.37367, 0.2, 2)
 [node name="SoilPlot3" parent="Soil" instance=ExtResource("6_kiset")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.37367, 0.2, 4)
 
+[node name="SoilPlot9" parent="Soil" instance=ExtResource("6_kiset")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.37367, 0.2, 6)
+
 [node name="SoilPlot4" parent="Soil" instance=ExtResource("6_kiset")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.37367, 0.2, 4)
+
+[node name="SoilPlot8" parent="Soil" instance=ExtResource("6_kiset")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.37367, 0.2, 6)
+
+[node name="SoilPlot5" parent="Soil" instance=ExtResource("6_kiset")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37367, 0.2, 4)
+
+[node name="SoilPlot7" parent="Soil" instance=ExtResource("6_kiset")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37367, 0.2, 6)
+
+[node name="Flooring" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.25443, -0.161773, -4)
+
+[node name="Props" type="Node3D" parent="Flooring"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.4419, 0.161773, 2.62339)
+
+[node name="Fence" parent="Flooring/Props" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="Fence2" parent="Flooring/Props" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+
+[node name="Fence3" parent="Flooring/Props" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+
+[node name="Fence4" parent="Flooring/Props" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
+
+[node name="Fence5" parent="Flooring/Props" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+
+[node name="Fence6" parent="Flooring/Props" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -9.01738)
+
+[node name="Fence7" parent="Flooring/Props" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10.0174)
+
+[node name="Fence8" parent="Flooring/Props" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -11.0174)
+
+[node name="Props2" type="Node3D" parent="Flooring"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.44193, 0.161773, 2.62339)
+
+[node name="Fence" parent="Flooring/Props2" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="Fence2" parent="Flooring/Props2" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+
+[node name="Fence3" parent="Flooring/Props2" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+
+[node name="Fence4" parent="Flooring/Props2" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
+
+[node name="Fence5" parent="Flooring/Props2" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+
+[node name="Fence6" parent="Flooring/Props2" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -9.01738)
+
+[node name="Fence7" parent="Flooring/Props2" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10.0174)
+
+[node name="Fence8" parent="Flooring/Props2" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -11.0174)
+
+[node name="Props3" type="Node3D" parent="Flooring"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.441925, 0.161773, 2.62339)
+
+[node name="Fence" parent="Flooring/Props3" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="Fence2" parent="Flooring/Props3" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+
+[node name="Fence3" parent="Flooring/Props3" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+
+[node name="Fence4" parent="Flooring/Props3" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
+
+[node name="Fence5" parent="Flooring/Props3" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+
+[node name="Fence6" parent="Flooring/Props3" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -9.01738)
+
+[node name="Fence7" parent="Flooring/Props3" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10.0174)
+
+[node name="Fence8" parent="Flooring/Props3" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -11.0174)
+
+[node name="Props4" type="Node3D" parent="Flooring"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.4419, 0.161773, 2.62339)
+
+[node name="Fence" parent="Flooring/Props4" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="Fence2" parent="Flooring/Props4" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+
+[node name="Fence3" parent="Flooring/Props4" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+
+[node name="Fence4" parent="Flooring/Props4" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
+
+[node name="Fence5" parent="Flooring/Props4" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+
+[node name="Fence6" parent="Flooring/Props4" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -9.01738)
+
+[node name="Fence7" parent="Flooring/Props4" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10.0174)
+
+[node name="Fence8" parent="Flooring/Props4" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -11.0174)
+
+[node name="Props9" type="Node3D" parent="Flooring"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.4419, 0.161773, 18.487)
+
+[node name="Fence" parent="Flooring/Props9" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="Fence2" parent="Flooring/Props9" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+
+[node name="Fence3" parent="Flooring/Props9" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+
+[node name="Fence4" parent="Flooring/Props9" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
+
+[node name="Fence5" parent="Flooring/Props9" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+
+[node name="Fence6" parent="Flooring/Props9" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -9.01738)
+
+[node name="Fence7" parent="Flooring/Props9" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10.0174)
+
+[node name="Fence8" parent="Flooring/Props9" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -11.0174)
+
+[node name="Props10" type="Node3D" parent="Flooring"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.44193, 0.161773, 18.487)
+
+[node name="Fence" parent="Flooring/Props10" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="Fence2" parent="Flooring/Props10" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+
+[node name="Fence3" parent="Flooring/Props10" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+
+[node name="Fence4" parent="Flooring/Props10" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
+
+[node name="Fence5" parent="Flooring/Props10" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+
+[node name="Fence6" parent="Flooring/Props10" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -9.01738)
+
+[node name="Fence7" parent="Flooring/Props10" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10.0174)
+
+[node name="Fence8" parent="Flooring/Props10" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -11.0174)
+
+[node name="Props11" type="Node3D" parent="Flooring"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.441925, 0.161773, 18.487)
+
+[node name="Fence" parent="Flooring/Props11" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="Fence2" parent="Flooring/Props11" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+
+[node name="Fence3" parent="Flooring/Props11" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+
+[node name="Fence4" parent="Flooring/Props11" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
+
+[node name="Fence5" parent="Flooring/Props11" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+
+[node name="Fence6" parent="Flooring/Props11" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -9.01738)
+
+[node name="Fence7" parent="Flooring/Props11" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10.0174)
+
+[node name="Fence8" parent="Flooring/Props11" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -11.0174)
+
+[node name="Props12" type="Node3D" parent="Flooring"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.4419, 0.161773, 18.487)
+
+[node name="Fence" parent="Flooring/Props12" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="Fence2" parent="Flooring/Props12" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+
+[node name="Fence3" parent="Flooring/Props12" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+
+[node name="Fence4" parent="Flooring/Props12" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
+
+[node name="Fence5" parent="Flooring/Props12" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+
+[node name="Fence6" parent="Flooring/Props12" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -9.01738)
+
+[node name="Fence7" parent="Flooring/Props12" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10.0174)
+
+[node name="Fence8" parent="Flooring/Props12" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -11.0174)
+
+[node name="Props5" type="Node3D" parent="Flooring"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.9916, 0.161773, -4.95569)
+
+[node name="Fence" parent="Flooring/Props5" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="Fence2" parent="Flooring/Props5" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+
+[node name="Fence3" parent="Flooring/Props5" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+
+[node name="Fence4" parent="Flooring/Props5" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
+
+[node name="Fence5" parent="Flooring/Props5" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+
+[node name="Fence6" parent="Flooring/Props5" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -9.01738)
+
+[node name="Fence7" parent="Flooring/Props5" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10.0174)
+
+[node name="Fence8" parent="Flooring/Props5" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -11.0174)
+
+[node name="Props6" type="Node3D" parent="Flooring"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.9916, 0.161773, 3.03974)
+
+[node name="Fence" parent="Flooring/Props6" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="Fence2" parent="Flooring/Props6" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+
+[node name="Fence3" parent="Flooring/Props6" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+
+[node name="Fence4" parent="Flooring/Props6" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
+
+[node name="Fence5" parent="Flooring/Props6" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+
+[node name="Fence6" parent="Flooring/Props6" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -9.01738)
+
+[node name="Fence7" parent="Flooring/Props6" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10.0174)
+
+[node name="Fence8" parent="Flooring/Props6" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -11.0174)
+
+[node name="Props7" type="Node3D" parent="Flooring"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 24.8698, 0.161773, -4.95569)
+
+[node name="Fence" parent="Flooring/Props7" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="Fence2" parent="Flooring/Props7" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+
+[node name="Fence3" parent="Flooring/Props7" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+
+[node name="Fence4" parent="Flooring/Props7" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
+
+[node name="Fence5" parent="Flooring/Props7" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+
+[node name="Fence6" parent="Flooring/Props7" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -9.01738)
+
+[node name="Fence7" parent="Flooring/Props7" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10.0174)
+
+[node name="Fence8" parent="Flooring/Props7" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -11.0174)
+
+[node name="Props8" type="Node3D" parent="Flooring"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 24.8698, 0.161773, 3.03974)
+
+[node name="Fence" parent="Flooring/Props8" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="Fence2" parent="Flooring/Props8" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+
+[node name="Fence3" parent="Flooring/Props8" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+
+[node name="Fence4" parent="Flooring/Props8" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
+
+[node name="Fence5" parent="Flooring/Props8" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+
+[node name="Fence6" parent="Flooring/Props8" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -9.01738)
+
+[node name="Fence7" parent="Flooring/Props8" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10.0174)
+
+[node name="Fence8" parent="Flooring/Props8" instance=ExtResource("4_36wb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -11.0174)
+
+[node name="Floor" type="Node3D" parent="Flooring"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.25443, 0.161773, 4)
+
+[node name="GrassTileMedium" parent="Flooring/Floor" instance=ExtResource("7_06g8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10)
+
+[node name="GrassTileMedium2" parent="Flooring/Floor" instance=ExtResource("7_06g8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="GrassTileMedium10" parent="Flooring/Floor" instance=ExtResource("7_06g8c")]
+
+[node name="GrassTileMedium13" parent="Flooring/Floor" instance=ExtResource("7_06g8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+
+[node name="GrassTileMedium12" parent="Flooring/Floor" instance=ExtResource("7_06g8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 10)
+
+[node name="GrassTileDense" parent="Flooring/Floor" instance=ExtResource("4_2x2kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+
+[node name="GrassTileDense15" parent="Flooring/Floor" instance=ExtResource("4_2x2kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 10)
+
+[node name="GrassTileMedium4" parent="Flooring/Floor" instance=ExtResource("7_06g8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 0)
+
+[node name="GrassTileMedium5" parent="Flooring/Floor" instance=ExtResource("7_06g8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 10)
+
+[node name="GrassTileMedium6" parent="Flooring/Floor" instance=ExtResource("7_06g8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 10)
+
+[node name="GrassTileMedium7" parent="Flooring/Floor" instance=ExtResource("7_06g8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, -10)
+
+[node name="GrassTileMedium9" parent="Flooring/Floor" instance=ExtResource("7_06g8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, -10)
+
+[node name="GrassTileDense2" parent="Flooring/Floor" instance=ExtResource("4_2x2kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -10)
+
+[node name="GrassTileDense5" parent="Flooring/Floor" instance=ExtResource("4_2x2kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -10)
+
+[node name="GrassTileDense7" parent="Flooring/Floor" instance=ExtResource("4_2x2kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -10)
+
+[node name="GrassTileMedium8" parent="Flooring/Floor" instance=ExtResource("7_06g8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 0)
+
+[node name="GrassTileDense12" parent="Flooring/Floor" instance=ExtResource("4_2x2kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, -10)
+
+[node name="GrassTileDense10" parent="Flooring/Floor" instance=ExtResource("4_2x2kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+
+[node name="GrassTileDense11" parent="Flooring/Floor" instance=ExtResource("4_2x2kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -10)
+
+[node name="GrassTileDense8" parent="Flooring/Floor" instance=ExtResource("4_2x2kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -10)
+
+[node name="GrassTileDense9" parent="Flooring/Floor" instance=ExtResource("4_2x2kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -10)
+
+[node name="GrassTileDense6" parent="Flooring/Floor" instance=ExtResource("4_2x2kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 0)
+
+[node name="GrassTileDense14" parent="Flooring/Floor" instance=ExtResource("4_2x2kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 10)
+
+[node name="GrassTileDense13" parent="Flooring/Floor" instance=ExtResource("4_2x2kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 0)
+
+[node name="GrassTileDense3" parent="Flooring/Floor" instance=ExtResource("4_2x2kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -10)
+
+[node name="GrassTileDense4" parent="Flooring/Floor" instance=ExtResource("4_2x2kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 0)
+
+[node name="GrassTileClean" parent="Flooring/Floor" instance=ExtResource("6_si63b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)

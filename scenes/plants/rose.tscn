@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cc4yxtma3yqaq" path="res://assets/final/flower/rose.glb" id="3_awvcc"]
 
 [node name="Rose" instance=ExtResource("1_gqqla")]
-stepTime = 12.0
+stepTime = 9.0
 pestChance = 0.25
 
 [node name="rose2" parent="Model" index="0" instance=ExtResource("3_awvcc")]

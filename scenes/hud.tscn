@@ -35,6 +35,24 @@ offset_bottom = 125.0
 text = "0"
 label_settings = ExtResource("2_ques6")
 
+[node name="Goal" type="Label" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 125.0
+offset_right = 190.0
+offset_bottom = 178.0
+text = "Goal:"
+label_settings = ExtResource("2_ques6")
+
+[node name="GoalValue" type="Label" parent="."]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 125.0
+offset_right = 426.0
+offset_bottom = 178.0
+text = "0"
+label_settings = ExtResource("2_ques6")
+
 [node name="TimeLeft" type="Label" parent="."]
 layout_mode = 0
 offset_left = 518.0
@@ -82,3 +100,5 @@ offset_bottom = 288.0
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 300.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

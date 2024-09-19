@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://lg86c14o5go3" path="res://assets/final/flower/sunflower.glb" id="2_hp58d"]
 
 [node name="Sunflower" instance=ExtResource("1_yd8gj")]
-stepTime = 8.0
+stepTime = 7.0
 pestChance = 0.175
 
 [node name="sunflower" parent="Model" index="0" instance=ExtResource("2_hp58d")]

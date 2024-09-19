@@ -39,7 +39,7 @@ func interact(_type : String = "0")->void:
             elif _type == "Rose":
                 Hud.spend_money(3)
                 plant = roseInstance.instantiate()
-            add_child(plant)
+            if plant: add_child(plant)
             return
         else:
             print("cant plant there worms")
