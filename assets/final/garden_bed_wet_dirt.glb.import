@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ba6v30qj7r4m3"
-path="res://.godot/imported/flower_ype.glb-1ac98db09b878c5b9cfd24efbd42e524.scn"
+uid="uid://d3yk0tn3gbukb"
+path="res://.godot/imported/garden_bed_wet_dirt.glb-17f7f9e1197d56fec6feb2b9406c27c9.scn"
 
 [deps]
 
-source_file="res://assets/final/flower_ype.glb"
-dest_files=["res://.godot/imported/flower_ype.glb-1ac98db09b878c5b9cfd24efbd42e524.scn"]
+source_file="res://assets/final/garden_bed_wet_dirt.glb"
+dest_files=["res://.godot/imported/garden_bed_wet_dirt.glb-17f7f9e1197d56fec6feb2b9406c27c9.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bon6nl65f8qnd"
-path="res://.godot/imported/flower_sprout.glb-e0f489d527b931c15bbdbadd5a1318ea.scn"
+uid="uid://ba6v30qj7r4m3"
+path="res://.godot/imported/ype.glb-3f3662a1f062213f76b1ba8862cdeebb.scn"
 
 [deps]
 
-source_file="res://assets/final/flower_sprout.glb"
-dest_files=["res://.godot/imported/flower_sprout.glb-e0f489d527b931c15bbdbadd5a1318ea.scn"]
+source_file="res://assets/final/flower/ype.glb"
+dest_files=["res://.godot/imported/ype.glb-3f3662a1f062213f76b1ba8862cdeebb.scn"]
 
 [params]
 

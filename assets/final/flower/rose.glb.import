@@ -3,20 +3,20 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://5c1a7is841xg"
-path="res://.godot/imported/pest_bug.glb-7ad80ab1cbebd808aed38573c70a945b.scn"
+uid="uid://cc4yxtma3yqaq"
+path="res://.godot/imported/rose.glb-829bc0e098cdb990b2f47db1f6bf8ab3.scn"
 
 [deps]
 
-source_file="res://assets/final/pest_bug.glb"
-dest_files=["res://.godot/imported/pest_bug.glb-7ad80ab1cbebd808aed38573c70a945b.scn"]
+source_file="res://assets/final/flower/rose.glb"
+dest_files=["res://.godot/imported/rose.glb-829bc0e098cdb990b2f47db1f6bf8ab3.scn"]
 
 [params]
 
 nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
-nodes/root_scale=2.0
+nodes/root_scale=1.0
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true

@@ -6,11 +6,19 @@ var phases: int = 4
 var currPhase: int = 0
 @onready var timer: Timer = $Timer
 var fullGrown : bool = false
+@export var pestChance: float = 0.1
 
 func _ready():
-    timer.wait_time = stepTime
+    dried()
     timer.start()
     $Animation.play("0")
+
+func watered()->void:
+    timer.wait_time = stepTime
+
+func dried()->void:
+    timer.wait_time = stepTime * 2.0
+
 
 func _on_timer_timeout():
     if currPhase < phases-2:

@@ -1,9 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://bxb4lubudesig"]
 
 [ext_resource type="PackedScene" uid="uid://d260dstdgknaq" path="res://scenes/primitives/plant.tscn" id="1_yd8gj"]
-[ext_resource type="PackedScene" uid="uid://18qkfcmma40r" path="res://assets/v2/sunflower.glb" id="2_ew81l"]
+[ext_resource type="PackedScene" uid="uid://lg86c14o5go3" path="res://assets/final/flower/sunflower.glb" id="2_hp58d"]
 
 [node name="Sunflower" instance=ExtResource("1_yd8gj")]
-stepTime = 10.0
+stepTime = 7.0
+pestChance = 0.175
 
-[node name="sunflower" parent="Model" index="0" instance=ExtResource("2_ew81l")]
+[node name="sunflower" parent="Model" index="0" instance=ExtResource("2_hp58d")]

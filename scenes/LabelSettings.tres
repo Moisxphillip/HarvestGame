@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dtyk6yp1dln2j"]
+
+[ext_resource type="FontFile" uid="uid://uqklujal5bno" path="res://assets/font/Hexenkoetel.ttf" id="1_o7i67"]
+
+[resource]
+font = ExtResource("1_o7i67")
+font_size = 50
