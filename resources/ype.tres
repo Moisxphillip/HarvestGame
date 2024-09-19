@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dwe4f3j3ijh84"]
+
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="1_np5a3"]
+[ext_resource type="Texture2D" uid="uid://c3vpohnyt6prq" path="res://assets/ui/ype.png" id="1_vavq6"]
+
+[resource]
+script = ExtResource("1_np5a3")
+type = 2
+item_name = "Ype"
+stackable = true
+count = 1
+price_buy = 30.0
+price_sell = 70.0
+sellable = true
+description = "A ype"
+item_texture = ExtResource("1_vavq6")

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bqhhj1wwydom"]
+
+[ext_resource type="Texture2D" uid="uid://b1j8sl0mbfh1r" path="res://assets/ui/sprout.png" id="1_hhbvv"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="1_uhtik"]
+
+[resource]
+script = ExtResource("1_uhtik")
+type = 2
+item_name = "Sprout"
+stackable = true
+count = 1
+price_buy = 5.0
+price_sell = 15.0
+sellable = true
+description = "A sprout"
+item_texture = ExtResource("1_hhbvv")

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bt6sgtfmew25a"]
+
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="1_4qgko"]
+[ext_resource type="Texture2D" uid="uid://cnrqvspqt3iwb" path="res://assets/ui/rose.png" id="1_sl82k"]
+
+[resource]
+script = ExtResource("1_4qgko")
+type = 2
+item_name = "Rose"
+stackable = true
+count = 1
+price_buy = 0.0
+price_sell = 0.0
+sellable = true
+description = "A rose"
+item_texture = ExtResource("1_sl82k")

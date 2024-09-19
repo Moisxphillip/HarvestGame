@@ -17,6 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+Items="*res://scripts/globals/items.gd"
+Money="*res://scripts/globals/money.gd"
 Hud="*res://scenes/hud.tscn"
 
 [display]
@@ -28,6 +30,10 @@ window/stretch/mode="canvas_items"
 [filesystem]
 
 import/blender/enabled=false
+
+[gui]
+
+theme/custom_font="res://assets/fonts/CartoonFun-rg0zO.ttf"
 
 [input]
 

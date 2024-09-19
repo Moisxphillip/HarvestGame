@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://fr1sro1q0q4a"]
+
+[ext_resource type="Script" path="res://scripts/ui/bag_item.gd" id="1_u05y2"]
+
+[node name="UiItem" type="Node2D"]
+script = ExtResource("1_u05y2")

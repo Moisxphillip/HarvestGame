@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://xm7aiqt2skia"]
+
+[ext_resource type="Texture2D" uid="uid://btk5dy6m6dkb4" path="res://assets/ui/farming.png" id="1_wx7xd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_opm8w"]
+texture = ExtResource("1_wx7xd")
+region_rect = Rect2(838.687, 1783.11, 2066.59, 1528.62)
+
+[resource]
+Panel/styles/panel = SubResource("StyleBoxTexture_opm8w")
