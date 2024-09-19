@@ -1,76 +1,100 @@
-[gd_scene load_steps=6 format=3 uid="uid://bu60dvtc5ldse"]
+[gd_scene load_steps=8 format=3 uid="uid://bu60dvtc5ldse"]
 
-[ext_resource type="Texture2D" uid="uid://df8mvm78wgmuw" path="res://icon.svg" id="1_kp0hd"]
+[ext_resource type="Script" path="res://scripts/ui/ui.gd" id="1_e2774"]
+[ext_resource type="Theme" uid="uid://5uf0eckjush7" path="res://assets/ui/main_ui.tres" id="1_v2h7l"]
 [ext_resource type="Script" path="res://scenes/ShortcutItems.gd" id="2_83ypu"]
+[ext_resource type="Theme" uid="uid://cnd32ivv27kbh" path="res://assets/ui/s_main_ui.tres" id="2_0155s"]
 [ext_resource type="PackedScene" uid="uid://c5efk21nxaede" path="res://scenes/shop.tscn" id="2_qpiug"]
 [ext_resource type="Script" path="res://scripts/ui/bag_slot.gd" id="3_c2jc5"]
 [ext_resource type="PackedScene" uid="uid://biofoc6bw31p0" path="res://scenes/bag.tscn" id="3_fdx86"]
 
 [node name="UI" type="CanvasLayer"]
+script = ExtResource("1_e2774")
 
 [node name="ShopButton" type="Button" parent="."]
-offset_left = 1158.0
-offset_top = 630.0
-offset_right = 1249.0
-offset_bottom = 696.0
-text = "SHOP
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -122.0
+offset_top = -90.0
+offset_right = -31.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("1_v2h7l")
+text = "
 "
 
 [node name="BagButton" type="Button" parent="."]
-offset_left = 1051.0
-offset_top = 633.0
-offset_right = 1137.0
-offset_bottom = 693.0
-text = "BAG"
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -229.0
+offset_top = -87.0
+offset_right = -143.0
+offset_bottom = -27.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("2_0155s")
 
-[node name="Perfil" type="Panel" parent="."]
-offset_left = 18.0
-offset_top = 14.0
-offset_right = 189.0
-offset_bottom = 87.0
-
-[node name="Char" type="Sprite2D" parent="Perfil"]
-position = Vector2(31, 38)
-scale = Vector2(0.417969, 0.417969)
-texture = ExtResource("1_kp0hd")
-
-[node name="MoneyLabel" type="Label" parent="Perfil"]
-layout_mode = 0
-offset_left = 72.0
+[node name="MoneyLabel" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -96.0
 offset_top = 15.0
-offset_right = 112.0
-offset_bottom = 38.0
+offset_right = -42.0
+offset_bottom = 42.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.772549, 0.498039, 0.0941176, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.337255)
+theme_override_font_sizes/font_size = 25
 text = "200g"
 
 [node name="ShortcutItems" type="GridContainer" parent="."]
-offset_left = 21.0
-offset_top = 594.0
-offset_right = 304.0
-offset_bottom = 662.0
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 22.0
+offset_top = -85.0
+offset_right = 305.0
+offset_bottom = -17.0
+grow_vertical = 0
 columns = 4
 script = ExtResource("2_83ypu")
 
 [node name="BagSlot" type="PanelContainer" parent="ShortcutItems"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+theme = ExtResource("1_v2h7l")
 script = ExtResource("3_c2jc5")
 
 [node name="BagSlot2" type="PanelContainer" parent="ShortcutItems"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+theme = ExtResource("1_v2h7l")
 script = ExtResource("3_c2jc5")
 
 [node name="BagSlot3" type="PanelContainer" parent="ShortcutItems"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+theme = ExtResource("1_v2h7l")
 script = ExtResource("3_c2jc5")
 
 [node name="BagSlot4" type="PanelContainer" parent="ShortcutItems"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+theme = ExtResource("1_v2h7l")
 script = ExtResource("3_c2jc5")
 
 [node name="Shop" parent="." instance=ExtResource("2_qpiug")]
-visible = false
+position = Vector2(-38, -5)
 
 [node name="Bag" parent="." instance=ExtResource("3_fdx86")]
+
+[connection signal="pressed" from="ShopButton" to="." method="_on_shop_button_pressed"]
+[connection signal="pressed" from="BagButton" to="." method="_on_bag_button_pressed"]

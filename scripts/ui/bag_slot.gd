@@ -3,6 +3,7 @@ extends PanelContainer
 
 #@export var type: ItemData.Type
 signal item_changed(slot: BagSlot)
+var is_shorcut = false
 
 #func init(t: ItemData.Type, cms: Vector2)-> void:
 func init(cms: Vector2)-> void:
@@ -32,7 +33,7 @@ func copy_slot_info(slot):
 		print(slot.get_child_count())
 		if slot.get_child_count()>0:
 			get_child(0).queue_free()
-			add_child(slot.get_child(0).duplicate())		
+			add_child(slot.get_child(0).duplicate())
 		else:
 			get_child(0).queue_free()
 	else:
@@ -42,26 +43,8 @@ func copy_slot_info(slot):
 func emit_change_state():
 	emit_signal("item_changed", self)
 
-
-func _physics_process(delta:float)->void:
-	pass
-	#if get_child_count() > 0:
-		#var item := get_child(0)
-		#match type:
-			#ItemData.Type.Weapon:
-				 #Game.right_hand_equipped = item.data
-			##body item data
-			#_:
-				#Game.right_hand_equipped = item.data
-
-#func _gui_input(event: InputEvent)-> void:
-	#pass
-	#if event is InputEventMouseButton:
-		#if (event.button_index == 1 and (event.button_mask ==1 )):
-			#if get_child_count() > 0:
-				#if (get_child(0)).data.type == ItemData.Type.MISC:
-					#Game.heal_player(get_child(0).data.item_health)
-					#get_child(0).data.count -= 1
-					#get_child(0).get_child(0).text = str(get_child(0).data.count)
-					#if get_child(0).data.count <= 0:
-						#get_child(0).queue_free()
+func set_is_shorcut(value):
+	is_shorcut = value
+	
+func get_is_shortcut():
+	return is_shorcut

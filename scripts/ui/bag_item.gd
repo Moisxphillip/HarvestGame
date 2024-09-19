@@ -12,7 +12,10 @@ func _ready() -> void:
 		if data.stackable:
 			var label = Label.new()
 			label.text = str(data.count)
-			label.position =  Vector2(24,16)
+			if get_parent().get_is_shortcut():
+				label.position =  Vector2(100,100)
+			else:
+				label.position =  Vector2(24,16)
 			add_child(label)
 	
 func init(d: ItemData) -> void:

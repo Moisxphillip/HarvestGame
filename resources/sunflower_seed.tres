@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://ddh7fk2q0sp7y"]
+
+[ext_resource type="Texture2D" uid="uid://b20208i3phgxm" path="res://assets/ui/sunflower_seed.png" id="1_6bu7w"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="1_yypmp"]
+
+[resource]
+script = ExtResource("1_yypmp")
+type = 0
+item_name = "Sunflower seed"
+stackable = true
+count = 1
+price_buy = 15.0
+price_sell = 15.0
+sellable = true
+description = "Sunflower seed"
+item_texture = ExtResource("1_6bu7w")

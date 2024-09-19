@@ -1,8 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://biofoc6bw31p0"]
+[gd_scene load_steps=9 format=3 uid="uid://biofoc6bw31p0"]
 
 [ext_resource type="Script" path="res://scripts/ui/bag.gd" id="1_7142x"]
 [ext_resource type="Script" path="res://scripts/ui/bag_slot.gd" id="2_1ea0p"]
+[ext_resource type="Theme" uid="uid://bfqvaxp5ttg8h" path="res://assets/ui/bag_ui.tres" id="2_a2sie"]
 [ext_resource type="Script" path="res://scenes/SellSlot.gd" id="3_jk0w1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fcsch"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vcc3g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sr3u4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eugan"]
 
 [node name="Bag" type="Control"]
 layout_mode = 3
@@ -12,52 +21,94 @@ offset_bottom = 40.0
 script = ExtResource("1_7142x")
 
 [node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 322.0
-offset_top = 141.0
-offset_right = 964.0
-offset_bottom = 584.0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 31.939
+anchor_bottom = 17.88
+offset_left = 290.0
+offset_top = 140.0
+offset_right = -347.56
+offset_bottom = -132.2
+theme = ExtResource("2_a2sie")
 
 [node name="BagGrid" type="GridContainer" parent="Panel"]
 layout_mode = 0
-offset_left = 52.0
-offset_top = 106.0
-offset_right = 92.0
-offset_bottom = 146.0
+offset_left = 76.0
+offset_top = 110.0
+offset_right = 116.0
+offset_bottom = 150.0
 columns = 6
 
 [node name="ShortcutGrid" type="GridContainer" parent="Panel"]
 layout_mode = 0
-offset_left = 116.0
-offset_top = 389.0
-offset_right = 256.0
-offset_bottom = 429.0
+offset_left = 105.0
+offset_top = 354.0
+offset_right = 250.0
+offset_bottom = 394.0
+scale = Vector2(1.49183, 1.55532)
 columns = 4
 
 [node name="BagSlot" type="PanelContainer" parent="Panel/ShortcutGrid"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
+theme = ExtResource("2_a2sie")
 script = ExtResource("2_1ea0p")
 
 [node name="BagSlot2" type="PanelContainer" parent="Panel/ShortcutGrid"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
+theme = ExtResource("2_a2sie")
 script = ExtResource("2_1ea0p")
 
 [node name="BagSlot3" type="PanelContainer" parent="Panel/ShortcutGrid"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
+theme = ExtResource("2_a2sie")
 script = ExtResource("2_1ea0p")
 
 [node name="BagSlot4" type="PanelContainer" parent="Panel/ShortcutGrid"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
+theme = ExtResource("2_a2sie")
 script = ExtResource("2_1ea0p")
 
 [node name="SellSlot" type="PanelContainer" parent="Panel"]
 layout_mode = 0
-offset_left = 481.0
-offset_top = 341.0
-offset_right = 521.0
-offset_bottom = 381.0
+offset_left = 487.0
+offset_top = 238.0
+offset_right = 527.0
+offset_bottom = 278.0
 script = ExtResource("3_jk0w1")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 23.165
+anchor_top = 4.228
+anchor_right = 23.165
+anchor_bottom = 4.228
+offset_left = -34.6
+offset_top = -8.12001
+offset_right = -8.19501
+offset_bottom = 26.88
+theme_override_colors/font_color = Color(0.894118, 0, 0.0941176, 1)
+theme_override_colors/font_pressed_color = Color(0.999989, 0.885802, 0.869979, 1)
+theme_override_colors/font_hover_color = Color(0.885446, 0.670045, 0.476877, 1)
+theme_override_colors/font_focus_color = Color(0.894118, 0, 0.0941176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.894118, 0, 0.0941176, 1)
+theme_override_colors/font_disabled_color = Color(0.894118, 0, 0.0941176, 1)
+theme_override_colors/font_outline_color = Color(0.894118, 0, 0.0941176, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fcsch")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vcc3g")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_sr3u4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eugan")
+text = "x"
+
+[connection signal="gui_input" from="Panel/SellSlot" to="Panel/SellSlot" method="_on_gui_input"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
