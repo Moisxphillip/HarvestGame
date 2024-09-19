@@ -2,6 +2,7 @@ extends State
 
 func enter(_msg := {}) -> void:
     entity.animation.play("Idle")
+    entity.animation2.pause()
 
 func handle_input(_event: InputEvent) -> void:
     var type = 0

@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Items="*res://scripts/globals/items.gd"
 Money="*res://scripts/globals/money.gd"
+Hud="*res://scenes/hud.tscn"
 
 [display]
 
@@ -58,7 +59,7 @@ Right={
 }
 Interact={
 "deadzone": 0.5,
-"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(239, 15),"global_position":Vector2(243, 56),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(113, 11),"global_position":Vector2(117, 52),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
 1={

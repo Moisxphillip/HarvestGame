@@ -3,6 +3,7 @@ extends State
 
 func enter(_msg := {}) -> void:
     entity.animation.play("Interact")
+    entity.animation2.play("Grab")
     var plot : SoilPlot = entity.interaction.get_collider()
     if plot != null:
         plot.interact(_msg["type"])
