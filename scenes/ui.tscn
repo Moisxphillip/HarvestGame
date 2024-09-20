@@ -92,7 +92,10 @@ theme = ExtResource("1_v2h7l")
 script = ExtResource("3_c2jc5")
 
 [node name="Shop" parent="." instance=ExtResource("2_qpiug")]
-position = Vector2(-38, -5)
+offset_left = -38.0
+offset_top = -5.0
+offset_right = -38.0
+offset_bottom = -5.0
 
 [node name="Bag" parent="." instance=ExtResource("3_fdx86")]
 
