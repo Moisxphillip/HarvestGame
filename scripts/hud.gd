@@ -2,15 +2,17 @@ extends Control
 
 #doesnot work like this, review 
 var money = 10
+var goal = 500
 
 func start()->void:
     money = 10
     $Value.text = str(money)
+    $GoalValue.text = str(goal)
     $Timer.start()
     
 # Called when the node enters the scene tree for the first time.
 func _ready():
-    start()
+    pass
 
 func get_money(amount:int)->void:
     money+=amount
@@ -41,5 +43,7 @@ func is_interacting()->bool:
 
 func _on_timer_timeout() -> void:
     $Timer.stop()
-    #game over playboy
-    pass # Replace with function body.
+    if money < goal:
+        get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+        return
+    get_tree().change_scene_to_file("res://scenes/you_win.tscn")
