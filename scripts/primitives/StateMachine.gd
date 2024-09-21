@@ -8,43 +8,43 @@ signal transitioned(stateName)
 
 
 func _ready() -> void:
-    await owner.ready
-    for child in get_children():
-        child.switch_state.connect(on_switch_state)
-    if state:
-        state.enter()
+	await owner.ready
+	for child in get_children():
+		child.switch_state.connect(on_switch_state)
+	if state:
+		state.enter()
 
 
 func _unhandled_input(event: InputEvent) -> void:
-    if state:
-        state.handle_input(event)
+	if state:
+		state.handle_input(event)
 
 
 func _process(delta: float) -> void:
-    if state:
-        state.update(delta)
+	if state:
+		state.update(delta)
 
 
 func _physics_process(delta: float) -> void:
-    if state:
-        state.phys_update(delta)
+	if state:
+		state.phys_update(delta)
 
 
 func damaged_by(_hitBox : Area2D) -> void :
-    if state:
-        state.damaged_by(_hitBox)
-    
+	if state:
+		state.damaged_by(_hitBox)
+	
 
 func on_switch_state(targetState: String, _forwardData: Dictionary) -> void:
-    if not has_node(targetState):
-        print("StateMachine::transition_to: Current StateMachine has no state ", targetState)
-        return
-    
-    if !state or targetState == state.name:#Won't transition if there's no state or the new state is the same as the current
-        return
-    
-    state.exit()
-    state = get_node(targetState)
-    print("Entering ",get_parent().name, "::", targetState, " state")#Debug message
-    state.enter(_forwardData)
-    emit_signal("transitioned", state.name)
+	if not has_node(targetState):
+		print("StateMachine::transition_to: Current StateMachine has no state ", targetState)
+		return
+	
+	if !state or targetState == state.name:#Won't transition if there's no state or the new state is the same as the current
+		return
+	
+	state.exit()
+	state = get_node(targetState)
+	print("Entering ",get_parent().name, "::", targetState, " state")#Debug message
+	state.enter(_forwardData)
+	emit_signal("transitioned", state.name)

@@ -1,37 +1,58 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmia0lymgwd3x"]
+[gd_scene load_steps=9 format=3 uid="uid://cmia0lymgwd3x"]
 
 [ext_resource type="Script" path="res://scripts/Menu.gd" id="1_g7eog"]
+[ext_resource type="Theme" uid="uid://dx3decg14jluh" path="res://assets/ui/menu_theme1.tres" id="2_731iw"]
+[ext_resource type="Texture2D" uid="uid://47qsdbg5a5o" path="res://scenes/bg.png" id="2_pvbg5"]
+[ext_resource type="Theme" uid="uid://cvjtc0nswnnw3" path="res://assets/ui/menu_theme2.tres" id="3_ckjdv"]
+[ext_resource type="Theme" uid="uid://b1p6feoianlqm" path="res://assets/ui/menu_theme3.tres" id="4_m40nj"]
+[ext_resource type="Texture2D" uid="uid://dovetrtp2jna6" path="res://assets/ui/debtale.png" id="5_j6p2v"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_grf1w"]
+
+[sub_resource type="Theme" id="Theme_bq574"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_g7eog")
 
 [node name="Background" type="Sprite2D" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1281.0
-offset_bottom = 719.0
-color = Color(0.201527, 0.201527, 0.201527, 1)
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(650, 364)
+scale = Vector2(0.480506, 0.480506)
+texture = ExtResource("2_pvbg5")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
-offset_left = 520.0
+offset_left = 542.0
 offset_top = 486.0
-offset_right = 777.0
-offset_bottom = 599.0
+offset_right = 807.0
+offset_bottom = 614.0
+scale = Vector2(0.806665, 0.995458)
+theme_override_styles/panel = SubResource("StyleBoxTexture_grf1w")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
 layout_mode = 2
+theme = SubResource("Theme_bq574")
 
 [node name="Start" type="Button" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(20, 40)
 layout_mode = 2
-text = "Play"
+theme = ExtResource("2_731iw")
+theme_override_colors/font_color = Color(0.905882, 0.635294, 0.152941, 1)
+text = "PLAY"
 
 [node name="HowToPlay" type="Button" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-text = "How to play"
+theme = ExtResource("3_ckjdv")
+theme_override_colors/font_color = Color(0.905882, 0.635294, 0.152941, 1)
+text = "HOW TO PLAY"
 
 [node name="Quit" type="Button" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-text = "Quit"
+theme = ExtResource("4_m40nj")
+theme_override_colors/font_color = Color(0.905882, 0.635294, 0.152941, 1)
+text = "QUIT"
 
 [node name="HowToPlay" type="Control" parent="."]
 layout_mode = 3
@@ -39,25 +60,33 @@ anchors_preset = 0
 offset_right = 1281.0
 offset_bottom = 721.0
 
+[node name="ColorRect" type="ColorRect" parent="HowToPlay"]
+offset_left = 128.0
+offset_top = 36.0
+offset_right = 1167.0
+offset_bottom = 549.0
+color = Color(0.2, 0.2, 0.2, 0.607843)
+
 [node name="CloseHow" type="Button" parent="HowToPlay"]
 layout_mode = 0
-offset_left = 1127.0
-offset_top = 86.0
-offset_right = 1171.0
-offset_bottom = 128.0
+offset_left = 1108.0
+offset_top = 57.0
+offset_right = 1152.0
+offset_bottom = 99.0
 text = "X"
 
 [node name="Text" type="Label" parent="HowToPlay"]
 layout_mode = 0
-offset_left = 340.0
-offset_top = 141.0
-offset_right = 962.0
-offset_bottom = 606.0
+offset_left = 344.0
+offset_top = 138.0
+offset_right = 966.0
+offset_bottom = 603.0
 text = "You are in debt and your deadline is one day!
 In order to pay your landlord and keep your little farm,
 you need to plant flowers, water them for faster growth
 and keep them free from pests with the help of
 our friends Geckos!
+Use the store to buy new seeds and you farm to sell your crops! 
 
 
 Walk: WASD
@@ -65,6 +94,11 @@ Interact: Right Click
 
 "
 horizontal_alignment = 1
+
+[node name="Debtale" type="Sprite2D" parent="."]
+position = Vector2(754, 91)
+scale = Vector2(0.332165, 0.309816)
+texture = ExtResource("5_j6p2v")
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HowToPlay" to="." method="_on_how_to_play_pressed"]

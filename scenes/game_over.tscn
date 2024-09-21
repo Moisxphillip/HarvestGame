@@ -1,14 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://cistvgprdum7d"]
+[gd_scene load_steps=5 format=3 uid="uid://cistvgprdum7d"]
 
+[ext_resource type="Texture2D" uid="uid://da0msj5eyk6b1" path="res://assets/ui/Sem Título-1.png" id="1_aaxci"]
+[ext_resource type="Theme" uid="uid://dx3decg14jluh" path="res://assets/ui/menu_theme1.tres" id="1_ef01w"]
 [ext_resource type="Script" path="res://scripts/return_to_menu.gd" id="1_k5wuk"]
+[ext_resource type="Texture2D" uid="uid://7hqwyjq60ea4" path="res://assets/ui/BAD_ENDING.png" id="3_uifr1"]
 
 [node name="GameOver" type="Node2D"]
 
+[node name="SemTítulo-1" type="Sprite2D" parent="."]
+position = Vector2(654, 400)
+scale = Vector2(0.580462, 0.581123)
+texture = ExtResource("1_aaxci")
+
 [node name="Label" type="Label" parent="."]
-offset_left = 479.0
-offset_top = 258.0
-offset_right = 811.0
-offset_bottom = 315.0
+offset_left = 99.0
+offset_top = 374.0
+offset_right = 431.0
+offset_bottom = 491.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.407843)
 text = "Game Over!
 You  didn't manage to get
  enough money and the 
@@ -17,11 +26,18 @@ landlord took your farm!
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="."]
-offset_left = 538.0
-offset_top = 546.0
-offset_right = 761.0
-offset_bottom = 581.0
+offset_left = 112.0
+offset_top = 545.0
+offset_right = 379.0
+offset_bottom = 611.0
+theme = ExtResource("1_ef01w")
+theme_override_colors/font_color = Color(0.905882, 0.635294, 0.152941, 1)
 text = "Return to Main Menu"
 script = ExtResource("1_k5wuk")
+
+[node name="BadEnding" type="Sprite2D" parent="."]
+position = Vector2(542, 430)
+scale = Vector2(0.314328, 0.314327)
+texture = ExtResource("3_uifr1")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

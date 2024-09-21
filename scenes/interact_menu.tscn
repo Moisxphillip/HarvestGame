@@ -1,9 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://dengbwxl4ch30"]
+[gd_scene load_steps=16 format=3 uid="uid://dengbwxl4ch30"]
 
 [ext_resource type="Script" path="res://scripts/interact_menu.gd" id="1_tuhtg"]
 [ext_resource type="FontFile" uid="uid://uqklujal5bno" path="res://assets/font/Hexenkoetel.ttf" id="2_cdq2r"]
+[ext_resource type="Theme" uid="uid://5uf0eckjush7" path="res://assets/ui/main_ui.tres" id="2_niofb"]
+[ext_resource type="Theme" uid="uid://dx3decg14jluh" path="res://assets/ui/menu_theme1.tres" id="2_onc4r"]
+[ext_resource type="Theme" uid="uid://cvjtc0nswnnw3" path="res://assets/ui/menu_theme2.tres" id="4_2xue2"]
+[ext_resource type="Theme" uid="uid://b1p6feoianlqm" path="res://assets/ui/menu_theme3.tres" id="5_nyeh5"]
+[ext_resource type="Texture2D" uid="uid://bxok3ef35d45f" path="res://assets/ui/watering_can.png" id="6_ix7nm"]
+[ext_resource type="Texture2D" uid="uid://bj71vxbgr8o4d" path="res://assets/ui/rose_seed.png" id="7_dq24n"]
+[ext_resource type="Texture2D" uid="uid://cjq74cy1esecl" path="res://assets/ui/axe.png" id="7_gpupt"]
+[ext_resource type="Texture2D" uid="uid://b1j8sl0mbfh1r" path="res://assets/ui/sprout.png" id="8_1qegh"]
+[ext_resource type="Texture2D" uid="uid://b20208i3phgxm" path="res://assets/ui/sunflower_seed.png" id="8_tnnqv"]
+[ext_resource type="Texture2D" uid="uid://t7nvlr7kcoaq" path="res://assets/ui/ype_seed.png" id="9_hnaal"]
+[ext_resource type="Texture2D" uid="uid://bpadq18jrh3gd" path="res://assets/ui/pesticide.png" id="9_stukc"]
 
-[sub_resource type="Theme" id="Theme_3x5as"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_abrn0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_07a40"]
 
 [node name="InteractMenu" type="Control"]
 process_mode = 3
@@ -11,46 +24,70 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 19.0
+offset_top = -2.0
+offset_right = 19.0
+offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_3x5as")
 script = ExtResource("1_tuhtg")
 
 [node name="MainOptions" type="PanelContainer" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_abrn0")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MainOptions"]
 layout_mode = 2
+theme = ExtResource("2_niofb")
 
 [node name="Plant" type="Button" parent="MainOptions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+theme = ExtResource("2_onc4r")
+theme_override_colors/font_color = Color(0.915161, 0.675409, 0.298815, 1)
+theme_override_colors/font_disabled_color = Color(0.423529, 0.164706, 0.0431373, 1)
 theme_override_fonts/font = ExtResource("2_cdq2r")
 theme_override_font_sizes/font_size = 25
 text = "Plant
 "
 
 [node name="Harvest" type="Button" parent="MainOptions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+theme = ExtResource("4_2xue2")
+theme_override_colors/font_color = Color(0.913725, 0.67451, 0.298039, 1)
+theme_override_colors/font_disabled_color = Color(0.423529, 0.164706, 0.0431373, 1)
 theme_override_fonts/font = ExtResource("2_cdq2r")
 theme_override_font_sizes/font_size = 25
 text = "Harvest"
 
 [node name="Water" type="Button" parent="MainOptions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+theme = ExtResource("5_nyeh5")
+theme_override_colors/font_color = Color(0.913725, 0.67451, 0.298039, 1)
+theme_override_colors/font_disabled_color = Color(0.423529, 0.164706, 0.0431373, 1)
 theme_override_fonts/font = ExtResource("2_cdq2r")
 theme_override_font_sizes/font_size = 25
 text = "Water"
 
 [node name="Clear Pests" type="Button" parent="MainOptions/VBoxContainer"]
+custom_minimum_size = Vector2(150, 40)
 layout_mode = 2
+theme = ExtResource("2_onc4r")
+theme_override_colors/font_color = Color(0.913725, 0.67451, 0.298039, 1)
+theme_override_colors/font_disabled_color = Color(0.423529, 0.164706, 0.0431373, 1)
 theme_override_fonts/font = ExtResource("2_cdq2r")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 18
 text = "Clear Pests ($ 1)"
 
 [node name="Close" type="Button" parent="MainOptions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+theme = ExtResource("5_nyeh5")
+theme_override_colors/font_color = Color(0.96635, 0.761898, 0.462423, 1)
 theme_override_fonts/font = ExtResource("2_cdq2r")
 theme_override_font_sizes/font_size = 25
 text = "Close
@@ -61,27 +98,88 @@ layout_mode = 0
 offset_left = 163.0
 offset_right = 287.0
 offset_bottom = 101.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_07a40")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PlantOptions"]
 layout_mode = 2
 
 [node name="Ype" type="Button" parent="PlantOptions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+theme = ExtResource("5_nyeh5")
+theme_override_colors/font_color = Color(0.913725, 0.67451, 0.298039, 1)
+theme_override_colors/font_disabled_color = Color(0.423529, 0.164706, 0.0431373, 1)
 theme_override_fonts/font = ExtResource("2_cdq2r")
 theme_override_font_sizes/font_size = 25
 text = "Ype ($ 1)"
 
 [node name="Sunflower" type="Button" parent="PlantOptions/VBoxContainer"]
+custom_minimum_size = Vector2(150, 40)
 layout_mode = 2
+theme = ExtResource("2_onc4r")
+theme_override_colors/font_color = Color(0.913725, 0.67451, 0.298039, 1)
+theme_override_colors/font_disabled_color = Color(0.423529, 0.164706, 0.0431373, 1)
 theme_override_fonts/font = ExtResource("2_cdq2r")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 19
 text = "Sunflower ($ 2)"
 
 [node name="Rose" type="Button" parent="PlantOptions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+theme = ExtResource("4_2xue2")
+theme_override_colors/font_color = Color(0.913725, 0.67451, 0.298039, 1)
+theme_override_colors/font_disabled_color = Color(0.422964, 0.166505, 0.0415274, 1)
 theme_override_fonts/font = ExtResource("2_cdq2r")
 theme_override_font_sizes/font_size = 25
 text = "Rose ($ 3)"
+
+[node name="RoseSeed" type="Sprite2D" parent="PlantOptions/VBoxContainer"]
+position = Vector2(154, 109)
+scale = Vector2(0.138571, 0.138571)
+texture = ExtResource("7_dq24n")
+
+[node name="SunflowerSeed" type="Sprite2D" parent="PlantOptions/VBoxContainer"]
+position = Vector2(151, 63)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("8_tnnqv")
+
+[node name="YpeSeed" type="Sprite2D" parent="PlantOptions/VBoxContainer"]
+position = Vector2(148.25, 18.75)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("9_hnaal")
+
+[node name="WateringCan" type="Sprite2D" parent="."]
+position = Vector2(-1, 108)
+scale = Vector2(0.131429, 0.131429)
+texture = ExtResource("6_ix7nm")
+
+[node name="Axe" type="Sprite2D" parent="."]
+position = Vector2(-3, 63)
+scale = Vector2(0.118571, 0.118571)
+texture = ExtResource("7_gpupt")
+
+[node name="Sprout" type="Sprite2D" parent="."]
+position = Vector2(-1, 20)
+scale = Vector2(0.167857, 0.168024)
+texture = ExtResource("8_1qegh")
+
+[node name="Pesticide" type="Sprite2D" parent="."]
+position = Vector2(1, 154)
+scale = Vector2(0.145, 0.145)
+texture = ExtResource("9_stukc")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -14.0
+offset_top = 173.0
+offset_right = 26.0
+offset_bottom = 221.0
+theme_override_colors/font_color = Color(0.745098, 0, 0, 0.835294)
+theme_override_colors/font_shadow_color = Color(0.341176, 0, 0, 0.623529)
+theme_override_colors/font_outline_color = Color(0.964706, 0.952941, 0.811765, 1)
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 29
+text = "X"
 
 [connection signal="pressed" from="MainOptions/VBoxContainer/Plant" to="." method="_on_plant_pressed"]
 [connection signal="pressed" from="MainOptions/VBoxContainer/Harvest" to="." method="_on_harvest_pressed"]

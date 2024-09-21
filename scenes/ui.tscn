@@ -10,15 +10,16 @@
 script = ExtResource("1_e2774")
 
 [node name="ShopButton" type="Button" parent="."]
+custom_minimum_size = Vector2(150, 0)
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -122.0
-offset_top = -90.0
-offset_right = -31.0
-offset_bottom = -24.0
+offset_left = -167.0
+offset_top = -103.0
+offset_right = -17.0
+offset_bottom = -26.0
 grow_horizontal = 0
 grow_vertical = 0
 theme = ExtResource("1_v2h7l")
@@ -26,15 +27,16 @@ text = "
 "
 
 [node name="BagButton" type="Button" parent="."]
+custom_minimum_size = Vector2(150, 0)
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -229.0
-offset_top = -87.0
-offset_right = -143.0
-offset_bottom = -27.0
+offset_left = -304.0
+offset_top = -102.0
+offset_right = -175.0
+offset_bottom = -29.0
 grow_horizontal = 0
 grow_vertical = 0
 theme = ExtResource("2_0155s")

@@ -32,10 +32,10 @@ theme = ExtResource("2_a2sie")
 
 [node name="BagGrid" type="GridContainer" parent="Panel"]
 layout_mode = 0
-offset_left = 76.0
-offset_top = 110.0
-offset_right = 116.0
-offset_bottom = 150.0
+offset_left = 74.0
+offset_top = 169.0
+offset_right = 114.0
+offset_bottom = 209.0
 columns = 6
 
 [node name="SellSlot" type="PanelContainer" parent="Panel"]
