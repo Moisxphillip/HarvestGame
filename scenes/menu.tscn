@@ -21,6 +21,11 @@ position = Vector2(650, 364)
 scale = Vector2(0.480506, 0.480506)
 texture = ExtResource("2_pvbg5")
 
+[node name="Debtale" type="Sprite2D" parent="."]
+position = Vector2(754, 91)
+scale = Vector2(0.332165, 0.309816)
+texture = ExtResource("5_j6p2v")
+
 [node name="PanelContainer" type="PanelContainer" parent="."]
 offset_left = 542.0
 offset_top = 486.0
@@ -91,15 +96,10 @@ Use the store to buy new seeds and you farm to sell your crops!
 
 
 Walk: WASD
-Interact: Right Click
+Interact: Left Click
 
 "
 horizontal_alignment = 1
-
-[node name="Debtale" type="Sprite2D" parent="."]
-position = Vector2(754, 91)
-scale = Vector2(0.332165, 0.309816)
-texture = ExtResource("5_j6p2v")
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HowToPlay" to="." method="_on_how_to_play_pressed"]

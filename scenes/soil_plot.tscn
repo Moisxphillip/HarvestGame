@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://0d1tmm0xgtwa"]
+[gd_scene load_steps=27 format=3 uid="uid://0d1tmm0xgtwa"]
 
 [ext_resource type="Script" path="res://scripts/soil_plot.gd" id="1_kxu0l"]
 [ext_resource type="PackedScene" uid="uid://dccik1ee5wh31" path="res://assets/final/garden_bed_frame.glb" id="2_th5ur"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://d3yk0tn3gbukb" path="res://assets/final/garden_bed_wet_dirt.glb" id="4_aaqrj"]
 [ext_resource type="Script" path="res://scripts/worms.gd" id="4_jyoss"]
 [ext_resource type="PackedScene" uid="uid://bcxsh1kia1ogs" path="res://assets/final/pest_gecko.glb" id="5_e8vqg"]
+[ext_resource type="AudioStream" uid="uid://bha2ceegsgcu4" path="res://assets/final/sfx/crop_dead.wav" id="8_4g10l"]
+[ext_resource type="AudioStream" uid="uid://bprwdqc3o85r2" path="res://assets/final/sfx/worm_spawn.wav" id="9_dfheh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bbixg"]
 size = Vector3(1.4401, 0.137909, 1.44131)
@@ -400,6 +402,14 @@ autostart = true
 
 [node name="WateredTimer" type="Timer" parent="."]
 wait_time = 15.0
+
+[node name="CropDead" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_4g10l")
+bus = &"Effects"
+
+[node name="WormSpawn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_dfheh")
+bus = &"Effects"
 
 [connection signal="timeout" from="PestTimer" to="." method="_on_pest_timer_timeout"]
 [connection signal="timeout" from="GeckoTimer" to="." method="_on_gecko_timer_timeout"]

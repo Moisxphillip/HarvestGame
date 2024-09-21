@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://biofoc6bw31p0"]
+[gd_scene load_steps=9 format=3 uid="uid://biofoc6bw31p0"]
 
 [ext_resource type="Script" path="res://scripts/ui/bag.gd" id="1_7142x"]
 [ext_resource type="Theme" uid="uid://bfqvaxp5ttg8h" path="res://assets/ui/bag_ui.tres" id="2_a2sie"]
 [ext_resource type="Script" path="res://scenes/SellSlot.gd" id="3_jk0w1"]
+[ext_resource type="AudioStream" uid="uid://ci3tjyrmrk6aq" path="res://assets/final/sfx/sold.wav" id="4_olx7o"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fcsch"]
 
@@ -45,6 +46,10 @@ offset_top = 238.0
 offset_right = 527.0
 offset_bottom = 278.0
 script = ExtResource("3_jk0w1")
+
+[node name="Sell" type="AudioStreamPlayer" parent="Panel/SellSlot"]
+stream = ExtResource("4_olx7o")
+bus = &"Effects"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
