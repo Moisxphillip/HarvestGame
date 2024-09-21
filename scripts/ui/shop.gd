@@ -1,48 +1,48 @@
 extends Control
 
 var items = [
-	load("res://resources/ype_seed.tres"),
-	load("res://resources/sunflower_seed.tres"),
-	load("res://resources/rose_seed.tres")
+    load("res://resources/ype_seed.tres"),
+    load("res://resources/sunflower_seed.tres"),
+    load("res://resources/rose_seed.tres")
 ]
 
 @onready var Grid = get_node("Background/ScrollContainer/GridContainer")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	for i in range(Grid.get_child_count()):
-		Grid.get_child(i).get_node("tagname").text = items[i].item_name
-		Grid.get_child(i).get_node("Price").text = str(items[i].price_buy)+"g"
-		Grid.get_child(i).get_node("Description").text = items[i].description
-		Grid.get_child(i).get_node("TextureRect").texture = items[i].item_texture
-		Grid.get_child(i).get_node("TextureRect").expand_mode= TextureRect.EXPAND_IGNORE_SIZE
-		Grid.get_child(i).get_node("TextureRect").stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+    for i in range(Grid.get_child_count()):
+        Grid.get_child(i).get_node("tagname").text = items[i].item_name
+        Grid.get_child(i).get_node("Price").text = str(items[i].price_buy)+"g"
+        Grid.get_child(i).get_node("Description").text = items[i].description
+        Grid.get_child(i).get_node("TextureRect").texture = items[i].item_texture
+        Grid.get_child(i).get_node("TextureRect").expand_mode= TextureRect.EXPAND_IGNORE_SIZE
+        Grid.get_child(i).get_node("TextureRect").stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if visible:
-		$Background/ScrollContainer/GridContainer/Panel/BUY1.disabled = Hud.money < items[0].price_buy
-		$Background/ScrollContainer/GridContainer/Panel2/BUY2.disabled = Hud.money < items[1].price_buy
-		$Background/ScrollContainer/GridContainer/Panel3/BUY3.disabled = Hud.money < items[2].price_buy
-		
+func _process(_delta):
+    if visible:
+        $Background/ScrollContainer/GridContainer/Panel/BUY1.disabled = Hud.money < items[0].price_buy
+        $Background/ScrollContainer/GridContainer/Panel2/BUY2.disabled = Hud.money < items[1].price_buy
+        $Background/ScrollContainer/GridContainer/Panel3/BUY3.disabled = Hud.money < items[2].price_buy
+        
 func _on_button_pressed():
-	hide()
+    hide()
 
 
 func _on_buy_pressed():
-	if Hud.money >= items[0].price_buy and Hud.money != 0:
-		Hud.spend_money(items[0].price_buy)
-		$"../Bag".add_item("ype_seed")
+    if Hud.money >= items[0].price_buy and Hud.money != 0:
+        Hud.spend_money(items[0].price_buy)
+        $"../Bag".add_item("ype_seed")
 
 func _on_buy_2_pressed():
-	if Hud.money >= items[1].price_buy and Hud.money != 0:
-		Hud.spend_money(items[1].price_buy)
-		$"../Bag".add_item("sunflower_seed")
+    if Hud.money >= items[1].price_buy and Hud.money != 0:
+        Hud.spend_money(items[1].price_buy)
+        $"../Bag".add_item("sunflower_seed")
 
 
 func _on_buy_3_pressed():
-	if Hud.money >= items[2].price_buy and Hud.money != 0:
-		Hud.spend_money(items[2].price_buy)
-		$"../Bag".add_item("rose_seed")
+    if Hud.money >= items[2].price_buy and Hud.money != 0:
+        Hud.spend_money(items[2].price_buy)
+        $"../Bag".add_item("rose_seed")
 

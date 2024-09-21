@@ -136,7 +136,6 @@ shape = SubResource("CapsuleShape3D_4ta8w")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.836181, 0.548454, 0, -0.548454, 0.836181, 0, 4.69271, 5)
-current = true
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("3_7rgkk")
