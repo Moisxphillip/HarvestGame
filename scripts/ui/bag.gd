@@ -5,7 +5,6 @@ var items_to_load = [
 ]
 
 @onready var BagGrid = get_node("Panel/BagGrid")
-@onready var ShortcutGrid = get_node("Panel/ShortcutGrid")
 @export var bag_size = 24
 
 func _ready():

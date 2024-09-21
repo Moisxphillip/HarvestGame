@@ -17,5 +17,4 @@ func _drop_data(at_position: Vector2, data: Variant)-> void:
 		var item := get_child(0)
 		item.reparent(data.get_parent())
 	
-	var data_parent = data.get_parent()
 	data.reparent(self)	
