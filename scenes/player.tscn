@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bp4r7fihno3q4"]
+[gd_scene load_steps=17 format=3 uid="uid://bp4r7fihno3q4"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_p86ru"]
 [ext_resource type="Script" path="res://scripts/primitives/StateMachine.gd" id="3_7rgkk"]
@@ -10,6 +10,8 @@
 [ext_resource type="AudioStream" uid="uid://dugpyplykqixy" path="res://assets/final/sfx/interact.wav" id="6_miwx5"]
 [ext_resource type="PackedScene" uid="uid://bi8i2cgf7mpcv" path="res://assets/final/harvester.glb" id="8_4akx1"]
 [ext_resource type="PackedScene" uid="uid://nxx03oicbdsw" path="res://assets/final/watering_can.glb" id="8_q5ggp"]
+[ext_resource type="AudioStream" uid="uid://d2n5i30ilbwtc" path="res://assets/final/sfx/pop.ogg" id="8_s6mla"]
+[ext_resource type="AudioStream" uid="uid://cp5m20i6vcwlu" path="res://assets/final/sfx/water.ogg" id="10_v0mux"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4ta8w"]
 height = 2.0811
@@ -156,8 +158,16 @@ bus = &"Effects"
 [node name="ClearPests" type="Node" parent="StateMachine"]
 script = ExtResource("5_0seha")
 
+[node name="ClearAudio" type="AudioStreamPlayer" parent="StateMachine/ClearPests"]
+stream = ExtResource("8_s6mla")
+bus = &"Effects"
+
 [node name="Water" type="Node" parent="StateMachine"]
 script = ExtResource("6_48ppi")
+
+[node name="WaterAudio" type="AudioStreamPlayer" parent="StateMachine/Water"]
+stream = ExtResource("10_v0mux")
+bus = &"Effects"
 
 [node name="harvester" parent="." instance=ExtResource("8_4akx1")]
 

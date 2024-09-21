@@ -14,8 +14,8 @@ func _drop_data(at_position: Vector2, data: Variant)-> void:
     $Sell.play()
 
 #func _on_gui_input(event):
-	#if event is InputEventMouseButton:
-		#if (event.button_index == 1) and (event.button_mask == 1):
-			#if get_child_count() > 0:
-				#Hud.spend_money(get_child(0).data.price_sell * get_child(0).data.count)
-				#$"../..".add_item_data(get_child(0))
+    #if event is InputEventMouseButton:
+        #if (event.button_index == 1) and (event.button_mask == 1):
+            #if get_child_count() > 0:
+                #Hud.spend_money(get_child(0).data.price_sell * get_child(0).data.count)
+                #$"../..".add_item_data(get_child(0))
