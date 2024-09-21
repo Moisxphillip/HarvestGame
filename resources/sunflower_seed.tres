@@ -6,11 +6,11 @@
 [resource]
 script = ExtResource("1_yypmp")
 type = 0
-item_name = "Sunflower seed"
+item_name = "Sunflower Seed"
 stackable = true
 count = 1
-price_buy = 15.0
-price_sell = 15.0
+price_buy = 2.0
+price_sell = 2.0
 sellable = true
 description = "Sunflower seed"
 item_texture = ExtResource("1_6bu7w")

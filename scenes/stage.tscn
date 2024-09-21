@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c3q1qt4i6tb5y"]
+[gd_scene load_steps=12 format=3 uid="uid://c3q1qt4i6tb5y"]
 
 [ext_resource type="Script" path="res://scripts/stage.gd" id="1_d3aiy"]
 [ext_resource type="PackedScene" uid="uid://bp4r7fihno3q4" path="res://scenes/player.tscn" id="2_w26p3"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://0d1tmm0xgtwa" path="res://scenes/soil_plot.tscn" id="6_kiset"]
 [ext_resource type="PackedScene" uid="uid://cimqup5f1n4d8" path="res://scenes/grass_clean.tscn" id="6_si63b"]
 [ext_resource type="PackedScene" uid="uid://dsmsm7qn7kaf1" path="res://scenes/grass_medium.tscn" id="7_06g8c"]
-[ext_resource type="PackedScene" uid="uid://bu60dvtc5ldse" path="res://scenes/ui.tscn" id="7_v8w4m"]
 [ext_resource type="PackedScene" uid="uid://dp7rupoiclnxy" path="res://assets/tree.glb" id="8_ysrcf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_knpis"]
@@ -502,8 +501,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 0)
 
 [node name="GrassTileClean" parent="Flooring/Floor" instance=ExtResource("6_si63b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
-
-[node name="UI" parent="." instance=ExtResource("7_v8w4m")]
 
 [node name="Trees" type="Node3D" parent="."]
 transform = Transform3D(2.09738, 0, 0, 0, 2.09738, 0, 0, 0, 2.09738, -12.4808, 0.215263, -11.5402)

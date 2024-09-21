@@ -1,14 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3pxo2kb71gm7"]
+[gd_scene load_steps=5 format=3 uid="uid://b3pxo2kb71gm7"]
 
+[ext_resource type="Texture2D" uid="uid://5f57c882a36b" path="res://assets/ui/teste1.png" id="1_5mndc"]
 [ext_resource type="Script" path="res://scripts/return_to_menu.gd" id="1_penpi"]
+[ext_resource type="Theme" uid="uid://dx3decg14jluh" path="res://assets/ui/menu_theme1.tres" id="1_t7s5n"]
+[ext_resource type="Texture2D" uid="uid://chca3d7hemdbr" path="res://scenes/GOOD_ENDING.png" id="3_dmp73"]
 
 [node name="YouWin" type="Node2D"]
 
+[node name="Teste1" type="Sprite2D" parent="."]
+position = Vector2(733, 370)
+scale = Vector2(0.518013, 0.520229)
+texture = ExtResource("1_5mndc")
+
 [node name="Label" type="Label" parent="."]
-offset_left = 479.0
-offset_top = 258.0
-offset_right = 811.0
-offset_bottom = 315.0
+offset_left = 142.0
+offset_top = 322.0
+offset_right = 474.0
+offset_bottom = 439.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.34902)
 text = "Good job!
 You managed to get
  enough money and
@@ -17,11 +26,18 @@ pay your debt!
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="."]
-offset_left = 538.0
-offset_top = 546.0
-offset_right = 761.0
-offset_bottom = 581.0
+offset_left = 170.0
+offset_top = 484.0
+offset_right = 442.0
+offset_bottom = 543.0
+theme = ExtResource("1_t7s5n")
+theme_override_colors/font_color = Color(0.905882, 0.635294, 0.152941, 1)
 text = "Return to Main Menu"
 script = ExtResource("1_penpi")
+
+[node name="GoodEnding" type="Sprite2D" parent="."]
+position = Vector2(524, 241)
+scale = Vector2(0.258696, 0.275828)
+texture = ExtResource("3_dmp73")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
