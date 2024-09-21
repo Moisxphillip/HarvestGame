@@ -1,8 +1,10 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://b1p6feoianlqm"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://b1p6feoianlqm"]
 
 [ext_resource type="FontFile" uid="uid://c4b17kto65awb" path="res://assets/fonts/CartoonFun-rg0zO.ttf" id="1_jlskd"]
+[ext_resource type="Texture2D" uid="uid://cm1k1sh3axyep" path="res://assets/ui/farming2.png" id="2_101un"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tsbr1"]
+texture = ExtResource("2_101un")
 region_rect = Rect2(77.2818, 3849.05, 1553.13, 208.513)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rknoq"]
@@ -27,12 +29,15 @@ expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_auhjd"]
+texture = ExtResource("2_101un")
 region_rect = Rect2(1866.31, 3841.38, 1528.38, 208.12)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wgl1b"]
+texture = ExtResource("2_101un")
 region_rect = Rect2(94.9323, 3841.57, 1537.54, 212.96)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ae3rr"]
+texture = ExtResource("2_101un")
 region_rect = Rect2(3477.54, 3845.75, 1537.83, 203.386)
 
 [resource]

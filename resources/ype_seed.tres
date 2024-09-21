@@ -12,5 +12,5 @@ count = 1
 price_buy = 1.0
 price_sell = 1.0
 sellable = true
-description = "Ype seed"
+description = "Ideal seed for a farmer in debt."
 item_texture = ExtResource("1_q5362")
