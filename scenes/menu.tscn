@@ -52,6 +52,12 @@ theme = ExtResource("3_ckjdv")
 theme_override_colors/font_color = Color(0.905882, 0.635294, 0.152941, 1)
 text = "HOW TO PLAY"
 
+[node name="Credits" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_ckjdv")
+theme_override_colors/font_color = Color(0.905882, 0.635294, 0.152941, 1)
+text = "CREDITS"
+
 [node name="Quit" type="Button" parent="PanelContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
@@ -60,6 +66,7 @@ theme_override_colors/font_color = Color(0.905882, 0.635294, 0.152941, 1)
 text = "QUIT"
 
 [node name="HowToPlay" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1281.0
@@ -101,7 +108,49 @@ Interact: Left Click
 "
 horizontal_alignment = 1
 
+[node name="Credits" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1281.0
+offset_bottom = 721.0
+
+[node name="ColorRect" type="ColorRect" parent="Credits"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 36.0
+offset_right = 1167.0
+offset_bottom = 549.0
+color = Color(0.2, 0.2, 0.2, 0.607843)
+
+[node name="CloseCredits" type="Button" parent="Credits"]
+layout_mode = 0
+offset_left = 1108.0
+offset_top = 57.0
+offset_right = 1152.0
+offset_bottom = 99.0
+text = "X"
+
+[node name="Text" type="Label" parent="Credits"]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 136.0
+offset_right = 964.0
+offset_bottom = 601.0
+theme_override_font_sizes/font_size = 22
+text = "Gustavo de Paula:
+Models and Animations
+
+Marcus Abrantes:
+Models, UI design and integration
+
+Moises Felipe de Lima:
+Code, Music/SFX"
+horizontal_alignment = 1
+
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HowToPlay" to="." method="_on_how_to_play_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="HowToPlay/CloseHow" to="." method="_on_close_how_pressed"]
+[connection signal="pressed" from="Credits/CloseCredits" to="." method="_on_close_credits_pressed"]
