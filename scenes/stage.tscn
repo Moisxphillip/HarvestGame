@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c3q1qt4i6tb5y"]
+[gd_scene load_steps=14 format=3 uid="uid://c3q1qt4i6tb5y"]
 
 [ext_resource type="Script" path="res://scripts/stage.gd" id="1_d3aiy"]
 [ext_resource type="PackedScene" uid="uid://bp4r7fihno3q4" path="res://scenes/player.tscn" id="2_w26p3"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dsmsm7qn7kaf1" path="res://scenes/grass_medium.tscn" id="7_06g8c"]
 [ext_resource type="PackedScene" uid="uid://dp7rupoiclnxy" path="res://assets/tree.glb" id="8_ysrcf"]
 [ext_resource type="AudioStream" uid="uid://cb7jgiey46vlp" path="res://assets/final/FarminTime.ogg" id="9_7rgaa"]
+[ext_resource type="AudioStream" uid="uid://fw7fkeu2j6uk" path="res://assets/final/sfx/forest.ogg" id="10_5qe7k"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_knpis"]
 sky_top_color = Color(0.752941, 0.796078, 0.858824, 1)
@@ -583,5 +584,11 @@ transform = Transform3D(1.28477, 0, 0.362319, 0, 1.33489, 0, -0.362319, 0, 1.284
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_7rgaa")
 autoplay = true
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_5qe7k")
+volume_db = 4.0
+autoplay = true
+bus = &"Ambience"
 
 [connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]

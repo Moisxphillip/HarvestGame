@@ -5,6 +5,7 @@ func enter(_msg := {}) -> void:
     #entity.animation.play("Interact")
     entity.animation2.play("Watering")
     entity.wateranim.play("Water")
+    $WaterAudio.play()
                 
 
 func update(_delta: float) -> void:
