@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://buldajm63idvc"]
+[gd_scene load_steps=5 format=3 uid="uid://buldajm63idvc"]
 
 [ext_resource type="Script" path="res://scripts/hud.gd" id="1_h4m86"]
 [ext_resource type="PackedScene" uid="uid://dengbwxl4ch30" path="res://scenes/interact_menu.tscn" id="2_g5jod"]
 [ext_resource type="LabelSettings" uid="uid://dtyk6yp1dln2j" path="res://scenes/LabelSettings.tres" id="2_ques6"]
+[ext_resource type="PackedScene" uid="uid://bu60dvtc5ldse" path="res://scenes/ui.tscn" id="4_xndxk"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -100,5 +101,8 @@ offset_bottom = 288.0
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 300.0
+
+[node name="UI" parent="." instance=ExtResource("4_xndxk")]
+visible = false
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

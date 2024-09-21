@@ -6,11 +6,11 @@
 [resource]
 script = ExtResource("1_dw25g")
 type = 0
-item_name = "Ype seed"
+item_name = "Ype Seed"
 stackable = true
 count = 1
-price_buy = 30.0
-price_sell = 30.0
+price_buy = 1.0
+price_sell = 1.0
 sellable = true
 description = "Ype seed"
 item_texture = ExtResource("1_q5362")

@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://biofoc6bw31p0"]
+[gd_scene load_steps=8 format=3 uid="uid://biofoc6bw31p0"]
 
 [ext_resource type="Script" path="res://scripts/ui/bag.gd" id="1_7142x"]
-[ext_resource type="Script" path="res://scripts/ui/bag_slot.gd" id="2_1ea0p"]
 [ext_resource type="Theme" uid="uid://bfqvaxp5ttg8h" path="res://assets/ui/bag_ui.tres" id="2_a2sie"]
 [ext_resource type="Script" path="res://scenes/SellSlot.gd" id="3_jk0w1"]
 
@@ -38,39 +37,6 @@ offset_top = 110.0
 offset_right = 116.0
 offset_bottom = 150.0
 columns = 6
-
-[node name="ShortcutGrid" type="GridContainer" parent="Panel"]
-layout_mode = 0
-offset_left = 105.0
-offset_top = 354.0
-offset_right = 250.0
-offset_bottom = 394.0
-scale = Vector2(1.49183, 1.55532)
-columns = 4
-
-[node name="BagSlot" type="PanelContainer" parent="Panel/ShortcutGrid"]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-theme = ExtResource("2_a2sie")
-script = ExtResource("2_1ea0p")
-
-[node name="BagSlot2" type="PanelContainer" parent="Panel/ShortcutGrid"]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-theme = ExtResource("2_a2sie")
-script = ExtResource("2_1ea0p")
-
-[node name="BagSlot3" type="PanelContainer" parent="Panel/ShortcutGrid"]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-theme = ExtResource("2_a2sie")
-script = ExtResource("2_1ea0p")
-
-[node name="BagSlot4" type="PanelContainer" parent="Panel/ShortcutGrid"]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-theme = ExtResource("2_a2sie")
-script = ExtResource("2_1ea0p")
 
 [node name="SellSlot" type="PanelContainer" parent="Panel"]
 layout_mode = 0

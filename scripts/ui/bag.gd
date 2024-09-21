@@ -1,16 +1,6 @@
 extends Control
 
 var items_to_load = [
-	"res://resources/hoe.tres",
-	"res://resources/pesticide.tres",
-	"res://resources/rose.tres",
-	"res://resources/rose_seed.tres",
-	"res://resources/sprout.tres",
-	"res://resources/sprout_seed.tres",
-	"res://resources/sunflower.tres",
-	"res://resources/sunflower_seed.tres",
-	"res://resources/watering_can.tres",
-	"res://resources/ype.tres",
 	"res://resources/ype_seed.tres"
 ]
 
@@ -27,9 +17,6 @@ func _ready():
 		var item = BagItem.new()
 		item.init(load(items_to_load[i]))
 		$Panel/BagGrid.get_child(i).add_child(item)
-		#ShortcutGrid.get_child(i).add_child(item)
-		#$"../ShortcutItems".get_child(i).add_child(item.duplicate())
-		#$"../ShortcutItems".get_child(i).add_child(item)
 	
 
 func add_item(item_name: String) -> void: 
@@ -69,6 +56,22 @@ func add_item_data(item) -> void:
 				item.reparent(BagGrid.get_child(i))
 				break
 				
+func has_item_quantity(item_name):
+	var quantity = 0
+	for i in bag_size:
+		if BagGrid.get_child(i).get_child_count() > 0:
+			if BagGrid.get_child(i).get_child(0).data.item_name == item_name:
+				quantity += BagGrid.get_child(i).get_child(0).data.count
+	return quantity
+	
+func consume_item(item_name):
+	for i in bag_size:
+		if BagGrid.get_child(i).get_child_count() > 0:
+			if BagGrid.get_child(i).get_child(0).data.item_name == item_name:
+				if BagGrid.get_child(i).get_child(0).data.count == 1:
+					BagGrid.get_child(i).get_child(0).queue_free()
+				else:
+					BagGrid.get_child(i).get_child(0).data.count -= 1
 
 
 func _on_button_pressed():

@@ -58,15 +58,17 @@ text = "x"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Background"]
 layout_mode = 0
-offset_left = 55.0
-offset_top = 142.0
-offset_right = 609.0
-offset_bottom = 350.0
+offset_left = 107.0
+offset_top = 143.0
+offset_right = 695.0
+offset_bottom = 351.0
 vertical_scroll_mode = 0
 
 [node name="GridContainer" type="GridContainer" parent="Background/ScrollContainer"]
 layout_mode = 2
-columns = 4
+theme_override_constants/h_separation = 19
+theme_override_constants/v_separation = 0
+columns = 3
 
 [node name="Panel" type="Panel" parent="Background/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(135, 200)
@@ -212,8 +214,9 @@ expand_mode = 2
 
 [node name="tagname" type="Label" parent="Background/ScrollContainer/GridContainer/Panel3"]
 layout_mode = 0
+offset_left = 4.0
 offset_top = 80.0
-offset_right = 133.0
+offset_right = 137.0
 offset_bottom = 105.0
 theme_override_colors/font_color = Color(0.42395, 0.251474, 0.133731, 1)
 theme_override_font_sizes/font_size = 12
@@ -260,72 +263,7 @@ theme_override_font_sizes/font_size = 10
 text = "BUY
 "
 
-[node name="Panel4" type="Panel" parent="Background/ScrollContainer/GridContainer"]
-custom_minimum_size = Vector2(135, 200)
-layout_mode = 2
-theme = ExtResource("3_0hrql")
-
-[node name="TextureRect" type="TextureRect" parent="Background/ScrollContainer/GridContainer/Panel4"]
-layout_mode = 0
-offset_left = 29.0
-offset_top = 20.0
-offset_right = 96.0
-offset_bottom = 87.0
-texture = ExtResource("4_0uiqr")
-expand_mode = 2
-
-[node name="tagname" type="Label" parent="Background/ScrollContainer/GridContainer/Panel4"]
-layout_mode = 0
-offset_top = 80.0
-offset_right = 133.0
-offset_bottom = 105.0
-theme_override_colors/font_color = Color(0.42395, 0.251474, 0.133731, 1)
-theme_override_font_sizes/font_size = 12
-text = "Name"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Price" type="Label" parent="Background/ScrollContainer/GridContainer/Panel4"]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 97.0
-offset_right = 133.0
-offset_bottom = 119.0
-theme_override_colors/font_color = Color(0.763578, 0.591157, 0.214078, 1)
-theme_override_colors/font_shadow_color = Color(0.19534, 0.155213, 0.0950088, 0.211765)
-theme_override_font_sizes/font_size = 8
-text = "Price
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Description" type="Label" parent="Background/ScrollContainer/GridContainer/Panel4"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 116.0
-offset_right = 130.0
-offset_bottom = 169.0
-theme_override_font_sizes/font_size = 8
-text = "asdasdasdas"
-
-[node name="BUY4" type="Button" parent="Background/ScrollContainer/GridContainer/Panel4"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 54.0
-offset_top = 166.0
-offset_right = -46.0
-offset_bottom = -9.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 10
-text = "BUY
-"
-
 [connection signal="pressed" from="Background/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Background/ScrollContainer/GridContainer/Panel/BUY1" to="." method="_on_buy_pressed"]
 [connection signal="pressed" from="Background/ScrollContainer/GridContainer/Panel2/BUY2" to="." method="_on_buy_2_pressed"]
 [connection signal="pressed" from="Background/ScrollContainer/GridContainer/Panel3/BUY3" to="." method="_on_buy_3_pressed"]
-[connection signal="pressed" from="Background/ScrollContainer/GridContainer/Panel4/BUY4" to="." method="_on_buy_4_pressed"]
