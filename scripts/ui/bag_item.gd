@@ -14,7 +14,8 @@ func _ready() -> void:
             label.text = str(data.count)
             label.position =  Vector2(24,16)
             add_child(label)
-    
+            
+            
 func init(d: ItemData) -> void:
     data = d
     

@@ -48,6 +48,3 @@ func _on_timer_timeout() -> void:
         return
     get_tree().change_scene_to_file("res://scenes/you_win.tscn")
     
-func harvest(item_name):
-    pass
-    
