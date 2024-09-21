@@ -1,4 +1,10 @@
 extends Node3D
 
 func _ready() -> void:
-	Hud.start()
+    $Music.play()
+    Hud.start()
+
+
+
+func _on_tree_exiting() -> void:
+    $Music.stop()
