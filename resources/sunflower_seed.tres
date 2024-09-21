@@ -12,5 +12,5 @@ count = 1
 price_buy = 2.0
 price_sell = 2.0
 sellable = true
-description = "Sunflower seed"
+description = "More profit, but take care! A bit more risky."
 item_texture = ExtResource("1_6bu7w")

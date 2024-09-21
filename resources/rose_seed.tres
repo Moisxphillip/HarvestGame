@@ -12,5 +12,5 @@ count = 1
 price_buy = 3.0
 price_sell = 3.0
 sellable = true
-description = "Rose seed"
+description = "The most dangerous. No risks no gain!"
 item_texture = ExtResource("1_axs5k")

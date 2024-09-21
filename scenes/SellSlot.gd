@@ -3,15 +3,15 @@ extends PanelContainer
 var item_data = null
 
 func init(cms: Vector2)-> void:
-    custom_minimum_size = cms
-    
+	custom_minimum_size = cms
+	
 func _can_drop_data(at_position: Vector2, data: Variant)-> bool:
-    return data.data.sellable
-    
+	return data.data.sellable
+	
 func _drop_data(at_position: Vector2, data: Variant)-> void:
-    Hud.get_money(data.data.price_sell * data.data.count)
-    data.queue_free()
-    $Sell.play()
+	Hud.get_money(data.data.price_sell * data.data.count)
+	data.queue_free()
+	$Sell.play()
 
 #func _on_gui_input(event):
     #if event is InputEventMouseButton:
